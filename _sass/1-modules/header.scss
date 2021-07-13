@@ -3,20 +3,35 @@
 * Mobile-First
 ***
 */
+
 .brand {
   font: $font-deco--display;
-  padding: 0.25em 1em;
+  line-height: 0;
+  padding: 1em;
+  text-align: center;
 }
-nav {
-  background-color: $primary;
+.main-nav {
   padding: 0.25em 1em;
-  & ul {
+  text-align: center;
+  &__list {
+    // display: none;
     list-style-type: none;
-    & li {
-      color: $white;
-    }
+  }
+  &__link {
+    font-weight: 700;
+    letter-spacing: 0.85px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  padding-top: 0.25em;
+}
+// .open-menu {
+//   display: block;
+// }
 
 /*
 ***
@@ -29,3 +44,22 @@ nav {
 * Desktop
 ***
 */
+@media screen and (min-width: 75em) {
+  body {
+    max-width: 67.5em;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1.25em;
+  }
+  .main-nav__link {
+    padding: 1.25em;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
