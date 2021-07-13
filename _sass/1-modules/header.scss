@@ -1,0 +1,31 @@
+/*
+***
+* Mobile-First
+***
+*/
+.brand {
+  font: $font-deco--display;
+  padding: 0.25em 1em;
+}
+nav {
+  background-color: $primary;
+  padding: 0.25em 1em;
+  & ul {
+    list-style-type: none;
+    & li {
+      color: $white;
+    }
+  }
+}
+
+/*
+***
+* Tablet
+***
+*/
+
+/*
+***
+* Desktop
+***
+*/

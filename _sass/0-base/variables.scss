@@ -1,0 +1,142 @@
+// color variables
+$blue: #4f6c86;
+// $indigo: #5a1c45;
+// $purple: #623a5c;
+// $pink: #d63384;
+$red: #ed3a3d;
+$orange: #fc7c55;
+$yellow: #fcda64;
+$green: #008a65;
+// $teal: #4db0f4;
+// $cyan: #0dcaf0;
+$white: #fcf7f8;
+$gray: #d8dfe2;
+// $gray-dark: #333333;
+$primary: #53284e;
+$secondary: #815375;
+$success: #587e51;
+$info: #4f6c86;
+$warning: #fcda64;
+$danger: #ed3a3d;
+// $light: #e8d7f1;
+// $dark: #230216;
+$black: #101820;
+$bg-danger: rgba(240, 56, 70, 0.2);
+
+// gray scale
+$gray-10: #323137;
+$gray-10-rgba: rgba(50, 45, 55, 1);
+$gray-10-hsla: hsla(250, 6%, 20%, 1);
+$gray-6: #4a494f;
+$gray-6-rgba: rgba(74, 73, 79, 1);
+$gray-6-hsla: hsla(250, 4%, 30%, 1);
+$gray-4: #636168;
+$gray-4-rgba: rgba(99, 97, 104, 1);
+$gray-4-hsla: hsla(257, 3%, 39%, 1);
+$gray-3: #7d7b82;
+$gray-3-rgba: rgba(125, 123, 130, 1);
+$gray-3-hsla: hsla(257, 3%, 50%, 1);
+$color-border: #b4b2ba;
+$color-border-rgba: rgba(180, 178, 186, 1);
+$color-border-hsla: hsla(255, 5%, 71%, 1);
+$gray-1: #d1cfd7;
+$gray-1-rgba: rgba(209, 207, 215, 0.3);
+$gray-1-hsla: hsla(255, 9%, 83%, 1);
+
+// box-shadow
+$lite-box: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+// gradient
+$bg: hsla(283, 96%, 11%, 1);
+$bg-g: linear-gradient(
+  180deg,
+  hsla(283, 96%, 11%, 1) 0%,
+  hsla(309, 26%, 31%, 1) 100%
+);
+$bg-moz-g: -moz-linear-gradient(
+  180deg,
+  hsla(283, 96%, 11%, 1) 0%,
+  hsla(309, 26%, 31%, 1) 100%
+);
+$bg-webkit-g: -webkit-linear-gradient(
+  180deg,
+  hsla(283, 96%, 11%, 1) 0%,
+  hsla(309, 26%, 31%, 1) 100%
+);
+
+/*-------------------------------------------------- 
+Typography
+--------------------------------------------------*/
+// font stack https://developer.mozilla.org/en-US/docs/Web/CSS/font
+$font-sans-serif-text: normal normal 400 1.1rem/1.75 "montserrat", sans-serif;
+$font-serif--title: normal normal 700 1.1rem "montserrat", sans-serif;
+$font-serif--nav: normal normal 700 1.2rem "montserrat", sans-serif;
+$font-monospace--code: normal normal 400 1.25rem/1.2 dico-code-two, mono;
+$font-deco--display: normal normal 400 2.5rem/1.75 wreath, serif;
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: white;
+  font: $font-sans-serif-text;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font: $font-serif--title;
+}
+// https://type-scale.com/
+// Scalable typography
+$base-text: 1rem;
+$font-scale: 1.333; // perfect fourth
+$text-xxs: calc(1rem / 1.2);
+$text-xs: calc(1rem * 1.2);
+$text-sm: 1rem;
+$text-md: calc(1rem * 1.2);
+$text-lg: calc(0.55rem * (1.2 * 2));
+$text-xl: calc(0.65rem * (1.2 * 3));
+$text-2xl: calc(0.75rem * (1.2 * 4));
+$text-3xl: calc(1rem * (1.2 * 5));
+$text-4xl: calc(1rem * (1.2 * 6));
+
+h1 {
+  margin-top: 0;
+  font-size: $text-2xl;
+}
+
+h2 {
+  font-size: $text-lg;
+}
+
+h3 {
+  font-size: $text-lg;
+}
+
+h4 {
+  font-size: $text-md;
+}
+
+h5 {
+  font-size: $text-md;
+}
+
+h6 {
+  font-size: $text-sm;
+}
+
+small,
+.text_small {
+  font-size: $text-xs;
+}
