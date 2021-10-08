@@ -13,6 +13,8 @@ linkedin_path: https://www.linkedin.com/in/melissajkipp/
 markdown: kramdown
 highlighter: rouge
 
+permalink: none
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
