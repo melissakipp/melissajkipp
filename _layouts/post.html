@@ -8,9 +8,9 @@
     {% include navigation.html %}
 
     <main>
-      {% if page.layout == 'post' %}
-      <h1>{{ page.title }}</h1>
-      {% endif %} {{ content }}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <hr />
+      {{ content }}
       <!-- Trips -->
 
       <!-- CTA1 -->
