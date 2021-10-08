@@ -1,9 +1,10 @@
 *,
-** {
+::after,
+::before {
   box-sizing: border-box;
   font-size: 100%;
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
 }
 
 html {
@@ -11,13 +12,34 @@ html {
 }
 
 body {
-  color: $black;
   background-color: $gray;
+  color: $black;
+  line-height: 1.65;
+  text-rendering: optimizeSpeed;
 }
 
-@media screen and (min-width: 1200px) {
+h1 {
+  font-size: 2.16rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 48ch;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    width: 100%;
+  }
+
   main {
-    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 70ch;
   }
 }
 
