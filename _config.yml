@@ -1,0 +1,44 @@
+title: Melissa Kipp
+email: melissakipp.az@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Melissa Kipp is a Frontend Developer, Graphic Designer, and Photographer. She cares about creating a point of view for inspiration and developing a web for all.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://melissajkipp.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_path: https://twitter.com/lint_on_kipp
+github_path: https://github.com/melissakipp
+docker_path: https://hub.docker.com/u/melissakipp
+linkedin_path: https://www.linkedin.com/in/melissajkipp/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-sass-converter
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - _pages
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - docker-compose

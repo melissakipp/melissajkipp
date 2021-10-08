@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <!-- header / hero -->
+    <header class="hero" id="home">
+      <!-- <img src="../assets/images/mjk-icon-logo-white.png" alt="MJK logo" /> -->
+      <article>
+        <h1 class="sr-only">Melissa Kipp</h1>
+        <span><img src="../assets/images/mjk-logo-white.png" alt="" /></span>
+
+        <p>
+          Hey there, I'm a frontend developer based in Phoenix, AZ and I'm
+          driven by curiosity of all things on the web. I am passionate about
+          accessibility and my career goal is to create beautiful websites that
+          are open for everyone.
+        </p>
+        <button class="cta">
+          <a href="#"
+            >Featured Project<span class="fas fa-angle-double-right"></span
+          ></a>
+        </button>
+      </article>
+    </header>
+
+    <!-- navigation -->
+    {% include navigation.html %}
+
+    <main role="main">{{ content }}</main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Contact Form -->
+
+      <!-- Social Media -->
+
+      <!-- Contact Info -->
+    </footer>
+  </body>
+</html>

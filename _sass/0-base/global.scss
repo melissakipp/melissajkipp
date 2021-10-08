@@ -1,0 +1,31 @@
+*,
+** {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: montserrat, sans-serif;
+}
+
+body {
+  color: $black;
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1440px;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  display: block;
+  height: auto;
+  // width: 100%;
+}

@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta
+    name="description"
+    content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta name="author" content="Developed and design by Melissa Kipp" />
+
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+
+  <!-- Favicon
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  -->
+
+  <!-- load font awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
+  <!-- load adobe fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/vfw3tos.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
