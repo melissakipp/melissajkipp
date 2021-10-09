@@ -1,1 +1,14 @@
 /* ############ Mobile-First -  Hero ############ */
+.post-info {
+  margin-bottom: 1em;
+  & ul {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    list-style-type: none;
+    & li:last-child {
+      display: block;
+    }
+  }
+}

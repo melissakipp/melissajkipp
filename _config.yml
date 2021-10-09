@@ -13,7 +13,22 @@ linkedin_path: https://www.linkedin.com/in/melissajkipp/
 markdown: kramdown
 highlighter: rouge
 
-permalink: none
+# permalink: none
+
+defaults:
+  - scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      permalink: /blog/:categories/:title/
+  - scope:
+      type: pages
+      path: _pages
+    values:
+      is_post: false
+      layout: default
 
 plugins:
   - jekyll-feed
