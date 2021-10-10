@@ -49,8 +49,38 @@
   }
 }
 
+.featured {
+  padding: 2rem 0;
+  &-list {
+    list-style-type: none;
+  }
+}
+
+.pinned-article {
+  font-size: 1.65rem;
+  margin-bottom: 1em;
+}
+
+.featured-wrap {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.featured-list li {
+  background-color: $white;
+  border-radius: 6px;
+  box-shadow: $lite-box;
+  max-width: 18.75em;
+  padding: 1em;
+}
+
+.pinned-article--title {
+  font-size: 1.35em;
+}
+
 /* ############ Media Query, (min-width: 700px) ############ */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   header.hero {
     background: url(../../assets/images/san-tan-mt-large.png) no-repeat center
       left;
@@ -66,7 +96,7 @@
   }
 }
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 48rem) {
   .hero article {
     grid-column: 3 / 5;
     max-width: 680px;

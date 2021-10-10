@@ -1,7 +1,7 @@
 <section class="navWrap">
-  <a href="/">
+  <a href="{{ site.baseurl }}">
     <img
-      src="../assets/images/mjk-icon-logo-white.png"
+      src="{{ '/assets/images/mjk-icon-logo-white.png' | relative_url }}"
       alt="MJK logo"
       class="logo"
     />
@@ -10,12 +10,18 @@
   <label for="navToggle" class="navToggleLabel"><span></span></label>
   <nav>
     <ul>
-      <!-- <li><a href="#home">Home</a></li> -->
-      <li><a href="/about">About</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/contact">Contact</a></li>
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+        {% for p in navigation_pages %}
+          {% if p.navigation_weight %}
+            <li>
+              <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                {{ p.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
       <li><a href="/resume" class="btn">Resume</a></li>
     </ul>
   </nav>
 </section>
+

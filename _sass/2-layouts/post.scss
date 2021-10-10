@@ -1,12 +1,71 @@
-/* ############ Mobile-First -  Hero ############ */
+/* ############ Mobile-First - Post ############ */
 .post-info {
   margin-bottom: 1em;
   & ul {
+    list-style-type: none;
+    padding: 0;
+    & li {
+      margin-bottom: 1em;
+      text-align: center;
+    }
+  }
+}
+
+.highlight {
+  background: $gray-2-hsla;
+  overflow: hidden;
+  border: 1px solid $gray-10-hsla;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 3rem 0;
+}
+
+pre span {
+  padding: 0.75em;
+}
+
+// This make stand alone code have style but it also does it to the code blocks
+// code {
+//   background-color: rgb(230, 230, 230);
+//   border-radius: 6px;
+//   padding: 4px;
+// }
+
+blockquote {
+  border-left: 0.5rem solid $primary;
+  font-size: 1.15rem;
+  font-style: italic;
+  padding: 1rem 0 1rem 1rem;
+  margin: 3em 0;
+}
+
+.pagination a,
+.pagination span {
+  padding: 7px 18px;
+  border: 1px solid #eee;
+  margin-left: -2px;
+  margin-right: -2px;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.pagination a {
+  &:hover {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+}
+
+.pagination {
+  text-align: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .post-info ul {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    list-style-type: none;
     & li:last-child {
       display: block;
     }

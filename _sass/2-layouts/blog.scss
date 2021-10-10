@@ -1,0 +1,10 @@
+.blog-list {
+  list-style-type: none;
+  & a {
+    text-decoration: none;
+  }
+}
+
+.blog-list--title {
+  font-size: 2rem;
+}

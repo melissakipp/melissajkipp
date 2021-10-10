@@ -18,8 +18,8 @@
               <svg
                 id="i-clock"
                 viewBox="0 0 32 32"
-                width="20"
-                height="20"
+                width="17"
+                height="17"
                 fill="none"
                 stroke="currentcolor"
                 stroke-linecap="round"
@@ -37,7 +37,7 @@
           <li>Author: {{ page.author }}</li>
           <li>Date: {{ page.date | date: "%A, %b %d, %Y" }}</li>
           <li>
-            {% for category in page.categories %}
+            Tag: {% for category in page.categories %}
             <a href="/blog/{{ category }}/"> {{ category }} </a>
             {% endfor %}
           </li>
@@ -45,7 +45,7 @@
       </section>
       <p><span class="">Article Description</span>{{ page.description }}</p>
       <hr />
-      {{ content }}
+      <article>{{ content }}</article>
       <!-- Trips -->
 
       <!-- CTA1 -->
@@ -60,7 +60,18 @@
 
       <!-- CTA3 -->
 
-      <!-- Photo Gallery -->
+      <!-- Pagination -->
+      <section>
+        <!-- post list -->
+        {% for post in paginator.posts %}
+        <li>
+          <a href="{{post.url | prepend: site.baseurl}}"
+            ><h3>{{post.title}}</h3></a
+          >
+        </li>
+        {% endfor %}
+
+
     </main>
 
     <!-- Footer -->

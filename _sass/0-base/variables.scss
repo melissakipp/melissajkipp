@@ -41,10 +41,10 @@ $color-border: #b4b2ba;
 $color-border-rgba: rgba(180, 178, 186, 1);
 $color-border-hsla: hsla(255, 5%, 71%, 1);
 $gray-1: #d1cfd7;
-$gray-1-rgba: rgba(209, 207, 215, 0.3);
+$gray-1-rgba: rgb(234, 233, 236);
 $gray-1-hsla: hsla(255, 9%, 83%, 0.3);
 
-$gray-2-hsla: hsla(257, 3%, 50%, 0.65);
+$gray-2-hsla: hsla(257, 3%, 50%, 0.12);
 
 // box-shadow
 $lite-box: rgba(0, 0, 0, 0.18) 0px 2px 4px;
@@ -75,5 +75,5 @@ Typography
 $font-sans-serif-text: normal normal 400 1.1rem/1.75 "montserrat", sans-serif;
 $font-serif--title: normal normal 700 2.5rem "montserrat", sans-serif;
 $font-serif--nav: normal normal 700 1.2rem "montserrat", sans-serif;
-$font-monospace--code: normal normal 400 1.25rem/1.2 dico-code-two, mono;
-$font-deco--display: normal normal 400 2.5rem/1.75 wreath, serif;
+// $font-monospace--code: normal normal 400 0.95rem "dico-code-two", mono;
+$font-deco--display: normal normal 400 2.5rem/1.75 "wreath", serif;
