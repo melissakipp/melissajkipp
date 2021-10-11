@@ -7,7 +7,7 @@
     <!-- navigation -->
     {% include navigation.html %}
 
-    <main>
+    <main class="post-main">
       <h1 class="post-title">{{ page.title }}</h1>
       <hr />
       <section class="post-info">
@@ -43,35 +43,9 @@
           </li>
         </ul>
       </section>
-      <p><span class="">Article Description</span>{{ page.description }}</p>
+      <p>Quick Summary: {{ page.description }}</p>
       <hr />
       <article>{{ content }}</article>
-      <!-- Trips -->
-
-      <!-- CTA1 -->
-
-      <!-- Team -->
-
-      <!-- CTA2 -->
-
-      <!-- Problem -->
-
-      <!-- Actions -->
-
-      <!-- CTA3 -->
-
-      <!-- Pagination -->
-      <section>
-        <!-- post list -->
-        {% for post in paginator.posts %}
-        <li>
-          <a href="{{post.url | prepend: site.baseurl}}"
-            ><h3>{{post.title}}</h3></a
-          >
-        </li>
-        {% endfor %}
-
-
     </main>
 
     <!-- Footer -->

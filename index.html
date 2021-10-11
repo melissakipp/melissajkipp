@@ -28,7 +28,7 @@ navigation_weight: 1
       <li>
         <h3 class="pinned-article--title">{{ post.title }}</h3>
         <p>Published: {{ post.date | date: "%B %d, %Y"}}</p>
-        <p><strong>Quick Summary:</strong><br />{{ post.description }}</p>
+        <p>{{ post.description }}</p>
         <a href="{{ post.url }}" class="read-more"> Read More ⟶ </a>
       </li>
     </ul>

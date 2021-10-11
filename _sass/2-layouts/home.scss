@@ -71,12 +71,16 @@
   background-color: $white;
   border-radius: 6px;
   box-shadow: $lite-box;
-  max-width: 18.75em;
+  height: 25rem;
+  margin: 1rem;
+  max-width: 21rem;
   padding: 1em;
 }
 
 .pinned-article--title {
   font-size: 1.35em;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 /* ############ Media Query, (min-width: 700px) ############ */
