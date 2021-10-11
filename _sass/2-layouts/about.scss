@@ -1,0 +1,15 @@
+.about-title,
+.personal {
+  text-align: center;
+}
+.personal {
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+/* ############ 10b. Media Query, (min-width: 1000px) ############ */
+@media screen and (min-width: 48rem) {
+  .about-content {
+    height: 90vh;
+  }
+}

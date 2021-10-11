@@ -1,4 +1,10 @@
 /* ############ Mobile-First - Post ############ */
+.post-content ul,
+ol {
+  margin: 0 2rem 2rem;
+  padding: 0;
+}
+
 .post-info {
   margin-bottom: 1em;
   & ul {
@@ -10,26 +16,6 @@
     }
   }
 }
-
-.highlight {
-  background: $gray-2-hsla;
-  overflow: hidden;
-  border: 1px solid $gray-10-hsla;
-  border-radius: 6px;
-  padding: 1rem;
-  margin: 3rem 0;
-}
-
-pre span {
-  padding: 0.75em;
-}
-
-// This make stand alone code have style but it also does it to the code blocks
-// code {
-//   background-color: rgb(230, 230, 230);
-//   border-radius: 6px;
-//   padding: 4px;
-// }
 
 blockquote {
   border-left: 0.5rem solid $primary;
@@ -64,7 +50,8 @@ blockquote {
   margin: 2em 0;
 }
 
-@media screen and (min-width: 48rem) {
+/* ############ Media Query, (min-width: 1100px) ############ */
+@media screen and (min-width: 68.75rem) {
   .post-info ul {
     align-items: center;
     display: flex;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sass Not Compiling"
-date: 2021-10-04 15:09:12 +0000
+date: 2021-10-02 15:09:12 +0000
 categories: stylesheets
 tags: pinned
 author: Melissa Kipp
@@ -55,7 +55,8 @@ Extension Install Requirements:
 - Live Server
 - Live Sass Compiler
 
-Error:
+### Error:
+
 When using Live Server to preview your work in a browser and you also want to use Sass. The Live Sass Compiler extension is very helpful. A mistake that I had made when working with partials is that I didn’t have the underscore before the partial file.
 
 ### Solution:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Journey Through the Coding World"
-date: 2021-10-04 15:09:12 +0000
+date: 2021-10-01 15:09:12 +0000
 categories: personal
 tags: pinned
 author: Melissa Kipp
