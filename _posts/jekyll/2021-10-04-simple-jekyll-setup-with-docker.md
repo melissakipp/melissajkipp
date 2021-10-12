@@ -3,10 +3,14 @@ layout: post
 title: "A Simple Jekyll Setup with Docker"
 date: 2021-10-04 15:09:12 +0000
 categories: jekyll
-tags: pinned
+tags: Pinned
 author: Melissa Kipp
 description: As I was starting my journey to learning to code, I was downloading and installing everything that was recommended. Once it was time for a new computer, I decided to be diligent on keeping it clean and clutter-free.
+image: /assets/images/arizona-gallery-2.jpg
+image-alt: "Desert flower"
 ---
+
+![desert flower](/assets/images/arizona-gallery-2.jpg){: .center-img}
 
 As a beginner I was taking several courses on a variety of topics. It seemed
 each course wanted to teach you by using different languages and by using

@@ -113,34 +113,15 @@ nav ul li:last-of-type::before {
   padding: 0.5rem;
 }
 
-nav .btn {
-  background: $gray-2-hsla;
-  border-radius: 6px;
-  color: $primary;
-
-  padding: 0.25rem 0.5rem;
-  letter-spacing: 1px;
-  text-align: center;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-}
-
-nav .btn:hover {
-  background-color: $primary;
-  color: $white;
-}
-
 a.active {
   border-bottom: 2px solid $secondary;
 }
 
 /* ############ 10a. Media Query, (min-width: 700px) ############ */
-@media screen and (min-width: 700px) {
-  /* ######### Navigation ######### */
+@media screen and (min-width: 43.75rem) {
   .navWrap {
     display: grid;
-    grid-template-columns: 100px minmax(auto, 1100px);
+    grid-template-columns: 100px minmax(auto, 48rem);
     justify-content: center;
   }
 
@@ -163,6 +144,7 @@ a.active {
   nav ul li a {
     border: none;
     color: $white;
+    margin-left: 1rem;
   }
 
   nav ul li a:hover {
@@ -173,17 +155,5 @@ a.active {
   nav ul li:last-of-type::before {
     display: none;
     padding: initial;
-  }
-
-  nav .btn {
-    width: auto;
-    background: $white;
-    color: $black;
-    font-weight: 700;
-  }
-
-  nav.btn:hover {
-    // box-shadow: inset 0 0 5px $primary;
-    background-color: $secondary;
   }
 }

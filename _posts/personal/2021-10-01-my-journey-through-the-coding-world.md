@@ -3,10 +3,14 @@ layout: post
 title: "My Journey Through the Coding World"
 date: 2021-10-01 15:09:12 +0000
 categories: personal
-tags: pinned
+tags:
 author: Melissa Kipp
 description: This career change started with wanting a space on the world wide web. As I researched on how to build a site, I found that all you need is HTML, CSS and some JavaScript. After taking a few online foundational courses, I developed my first website.
+image: /assets/images/arizona-gallery-3.jpg
+image-alt: "Desert flower"
 ---
+
+![desert flower](/assets/images/arizona-gallery-3.jpg){: .center-img}
 
 This career change started with wanting a space on the world wide web. As I researched on how to build a site, I found that all you need is HTML, CSS and some JavaScript. After taking a few online foundational courses, I developed my first website. It was horrible. The site did not come out as I expected, and the work was not what I anticipated. Throughout the experiment I abandoned ideas and techniques. The result was a non-responsive, messy design, that was not interesting at all.
 

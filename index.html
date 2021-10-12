@@ -9,43 +9,66 @@ navigation_weight: 1
 
 <!-- blog -->
 <section class="featured">
-  <article class="featured-desc--wrapper">
-    <div class="featured-desc">
-      <h2 class="pinned-article">Featured Articles</h2>
-      <p>
-        As I navigate through the tech industry&comma; I keep in
-        mind&period;&period;&period; &quot;Success is a journey not a
-        destination&semi; just keep learning and keep growing&quot;&period; As a
-        newbie to development there are so many directions to go and I am
-        constantly running into interesting topics&period; This is just the
-        beginning&period;
-      </p>
-    </div>
+  <article>
+    <h2>Blog</h2>
+    <p>
+      As I navigate through the tech industry&comma; I keep in
+      mind&period;&period;&period; &quot;Success is a journey not a
+      destination&semi; just keep learning and keep growing&quot;&period; As a
+      newbie to development there are so many directions to go and I am
+      constantly running into interesting topics&period; This is just the
+      beginning&period;
+    </p>
   </article>
-  {% if page.url == "/" %} {% for post in site.tags.pinned %}
-  <div class="featured-wrap">
-    <ul class="featured-list">
-      <li>
-        <h3 class="pinned-article--title">{{ post.title }}</h3>
-        <p>Published: {{ post.date | date: "%B %d, %Y"}}</p>
-        <p>{{ post.description }}</p>
-        <a href="{{ post.url }}" class="read-more"> Read More ⟶ </a>
-      </li>
-    </ul>
+  <ul class="featuredList">
+    {% if page.url == "/" %} {% for post in site.tags.Pinned %}
+    <li>
+      <img src="{{ post.image }}" alt="" />
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.description }}</p>
+      <a href="{{ post.url }}" class="read-more"> Read More ⟶ </a>
+    </li>
     {% endfor %} {% endif %}
-  </div>
+  </ul>
 </section>
 
-<!-- CTA1 -->
+<!-- CTA2 to GitHub -->
+<section>
+  <article>
+    <h2>Source Code</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum id
+      unde corrupti ullam omnis! Similique fuga vero id, error fugiat ea,
+      explicabo ad atque, facilis corporis quaerat tenetur doloremque impedit.
+    </p>
+    <a
+      href="https://github.com/melissakipp"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Repository</a
+    >
+  </article>
+  <!-- Portfolio cards -->
+</section>
 
-<!-- Team -->
-
-<!-- CTA2 -->
-
-<!-- Problem -->
-
-<!-- Actions -->
-
-<!-- CTA3 -->
+<section>
+  <!-- CTA3 to Behance -->
+  <article>
+    <h2>Graphic Design</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum id
+      unde corrupti ullam omnis! Similique fuga vero id, error fugiat ea,
+      explicabo ad atque, facilis corporis quaerat tenetur doloremque impedit.
+    </p>
+    <a
+      href="https://www.behance.net/melissajkipp"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Design</a
+    >
+  </article>
+  <!-- Illustrations/Graphic Design Work Bubbles -->
+</section>
 
 <!-- Photo Gallery -->
+<section><h2>Photography Gallery</h2></section>

@@ -3,10 +3,14 @@ layout: post
 title: "My Mentors List 2021"
 date: 2021-10-08 15:09:12 +0000
 categories: jekyll
-tags: pinned
+tags: Pinned
 author: Jekyll
 description: Mentors for web development students. A list of my top 5 mentors that have helped me. I have been on a self-study of learning how to code, these are they people that I kept a close eye on.
+image: /assets/images/arizona-gallery-4.jpg
+image-alt: "Desert flower"
 ---
+
+![desert flower](/assets/images/arizona-gallery-4.jpg){: .center-img}
 
 The value of finding a mentor is a great foundation to shaping your own personal brand. Everyone needs a personal brand now a days. It is especially helpful to employer to get a sense of your character and personally. This helps manager see where you can fix within the team structure. While this is important, finding a online mentor to help guide you through personal life and career is underrated.
 
