@@ -18,11 +18,8 @@ body {
 }
 
 main {
-  padding: 1.66rem;
-}
-
-h1 {
-  font-size: 2.36rem;
+  margin: 0 auto !important;
+  padding: 0;
 }
 
 hr {
@@ -38,36 +35,42 @@ h3 {
   max-width: 48ch;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
 .post-title {
   padding-top: 1.5em;
   text-align: center;
 }
 
-@media screen and (min-width: 48rem) {
-  main {
-    max-width: 65ch;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
+p {
+  max-width: 65ch;
 }
-
-@media screen and (min-width: 70rem) {
-  body {
-    width: 100%;
-  }
-
-  main {
-    max-width: 70ch;
-    padding: 0;
-  }
-}
-
-// p {
-//   margin-bottom: 1rem;
-// }
 
 img {
   display: block;
   height: auto;
 }
+
+i {
+  padding-left: 0.5rem;
+}
+
+// @media screen and (min-width: 48rem) {
+// }
+
+// @media screen and (min-width: 70rem) {
+// }

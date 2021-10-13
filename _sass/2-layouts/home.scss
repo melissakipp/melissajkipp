@@ -27,18 +27,16 @@
     line-height: 1.5;
   }
 }
-.hero .cta {
+.cta-btn {
   background-color: $bg;
   border: none;
   border-radius: 6px;
+  color: $white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin: 0.75rem auto 0;
   padding: 0.48em;
-  & a {
-    color: $white;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin: 0.75rem auto 0;
-    text-decoration: none;
-  }
+  text-decoration: none;
   & span {
     margin-left: 0.5rem;
   }
@@ -123,6 +121,38 @@
   background-color: #333;
 }
 
+/* ############ CTA ############ */
+.cta {
+  background-image: $bg-g;
+  margin: 0;
+  color: $white;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.cta h2 {
+  margin-left: 1rem;
+}
+
+.cta p {
+  border-left: solid 1px $white;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  padding-left: 1rem;
+}
+
+.cta a {
+  background-color: $white;
+  border-radius: 6px;
+  color: $black;
+  // margin-left: 1rem;
+  padding: 0.1rem 0.55rem;
+  &:hover {
+    background-color: #333;
+    color: $white;
+  }
+}
+
 /* ############ Media Query, (min-width: 700px) ############ */
 @media screen and (min-width: 43.75rem) {
   header.hero {
@@ -159,5 +189,15 @@
   .hero article {
     grid-column: 3 / 5;
     max-width: 680px;
+  }
+  .cta {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+  }
+
+  .cta h2 {
+    padding-right: 0.5rem;
   }
 }
