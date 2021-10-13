@@ -52,9 +52,6 @@
 .categoryExpoSection ul li a {
   color: $black;
   text-decoration: none;
-  &:visited {
-    color: $green;
-  }
   &:hover {
     color: $primary;
   }

@@ -153,6 +153,69 @@
   }
 }
 
+/* ############ Design ############ */
+.design {
+  margin: 1rem;
+}
+
+.design h3 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.design p {
+  margin-bottom: 1rem;
+}
+
+.designProjects {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.designProjects li {
+  grid-row: 1 / 2;
+}
+
+.designProjects li:nth-child(1) {
+  grid-column: 1 / 4;
+  order: 1;
+}
+
+.designProjects li:nth-child(2) {
+  grid-column: 3 / 6;
+}
+
+.designProjects li:nth-child(3) {
+  grid-column: 4 / 8;
+  order: 1;
+}
+
+.designProjects li:nth-child(4) {
+  grid-column: -3 / 6;
+}
+
+.designProjects li:nth-child(5) {
+  grid-column: -4 / -1;
+}
+
+// .designProjects li:hover {
+//   order: 2;
+// }
+
+.designProjects img {
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: $lite-box;
+  width: 80%;
+}
+
+.designProjects li:nth-child(3) img {
+  width: 70%;
+}
+
 /* ############ Media Query, (min-width: 700px) ############ */
 @media screen and (min-width: 43.75rem) {
   header.hero {
@@ -183,8 +246,42 @@
   .featured p {
     flex: 3;
   }
+
+  .featuredList {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* ############ Design ############ */
+  .design {
+    max-width: 48rem;
+    margin: auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .design h3 {
+    order: 2;
+    grid-column: 2 / -1;
+    align-self: center;
+  }
+
+  .designProjects {
+    order: 1;
+    grid-column: 1 / -1;
+  }
+
+  .design p {
+    border-right: solid 1px #dedede;
+    padding-right: 1rem;
+    order: 2;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 }
-/* ############ 10b. Media Query, (min-width: 1000px) ############ */
+
+/* ############ Media Query, (min-width: 1000px) ############ */
 @media screen and (min-width: 48rem) {
   .hero article {
     grid-column: 3 / 5;
@@ -198,6 +295,16 @@
   }
 
   .cta h2 {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
+  }
+
+  /* ############ Design ############ */
+  .design {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: repeat(2, auto);
+    margin: auto;
+    max-width: 48rem;
+    padding: 0 1rem;
   }
 }
