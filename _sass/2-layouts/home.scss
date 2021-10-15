@@ -216,6 +216,40 @@
   width: 70%;
 }
 
+/* ############ Gallery ############ */
+.gallery {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery h2 {
+  text-align: center;
+  color: $primary;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.galleryWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 0.5em;
+  grid-auto-flow: row dense;
+}
+
+.galleryWrap img[src$="_w.jpg"] {
+  grid-column-end: span 2;
+}
+
+.galleryWrap img[src$="_p.jpg"] {
+  grid-row-end: span 2;
+}
+
+.galleryWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ############ Media Query, (min-width: 700px) ############ */
 @media screen and (min-width: 43.75rem) {
   header.hero {
@@ -306,5 +340,18 @@
     margin: auto;
     max-width: 48rem;
     padding: 0 1rem;
+  }
+}
+
+/* ############ 10c. Feature Query ############ */
+/* SAFARI 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .galleryWrap {
+      align-items: stretch;
+    }
+    .galleryWrap img {
+      height: inherit;
+    }
   }
 }

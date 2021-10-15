@@ -1,13 +1,14 @@
-// .blog-list {
-//   list-style-type: none;
-//   & a {
-//     text-decoration: none;
-//   }
-// }
+.blogPageTitle {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  width: 100%;
+}
 
-// .blog-list--title {
-//   font-size: 2rem;
-// }
+.blogPageWrapper {
+  margin: 1rem;
+}
+
 .categoryExpo {
   height: 100vh;
   margin: 2rem 0;
@@ -54,5 +55,15 @@
   text-decoration: none;
   &:hover {
     color: $primary;
+  }
+}
+
+/* ############ Media Query, (min-width: 1000px) ############ */
+@media screen and (min-width: 1000px) {
+  /* ######### Blog Page ######### */
+  .blogPageWrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 }

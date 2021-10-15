@@ -1,6 +1,349 @@
-.site-footer {
-  background-color: $gray-10;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;
+/* ######### 9. Footer ######### */
+footer {
+  margin-top: 1rem;
+}
+/* ######### 9a. Footer > Contact ######### */
+.form {
+  background-color: $bg;
   color: $white;
+  padding: 1rem 1rem 2rem;
+}
+
+.form p {
+  padding-bottom: 1rem;
+}
+/* ######### Contact Form ######### */
+form#contactForm {
+  max-width: 350px;
+  margin: auto;
+}
+
+.contactForm div {
+  margin-top: 1em;
+}
+
+.contactForm div:first-of-type {
+  margin-top: 0;
+}
+
+.contactForm label {
+  display: block;
+}
+
+.contactForm input,
+.contactForm textarea {
+  border: solid 1px #dedede;
+  border-radius: 4px;
+  cursor: text;
+  font-size: 1rem;
+  max-width: 350px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.contactForm textarea {
+  min-height: 100px;
+}
+
+.contactForm button {
+  background-color: $primary;
+  border: none;
+  border-radius: 4px;
+  color: $white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  min-width: 200px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactForm button:hover {
+  background-color: #333;
+}
+
+.contactForm i {
+  font-size: 200%;
+  padding-right: 0.5rem;
+}
+
+.contactForm input[type="submit"]:active {
+  box-shadow: $lite-box;
+}
+
+.contactForm .checks {
+  margin: 0.25em 0 1em 0.1em;
+}
+
+.contactForm input[type="checkbox"] + label {
+  display: inline-block;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* custom checkbox */
+.contactForm .checks label {
+  display: inline-block;
+}
+
+.contactForm input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0 -1px;
+}
+
+input[type="checkbox"]:checked ~ span:before {
+  content: "\f14a";
+}
+
+.checks span:before {
+  display: inline-block;
+  box-sizing: border-box;
+  color: $white;
+  content: "\f0c8";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.3em;
+  margin: -3px 3px 0 0;
+  vertical-align: middle;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border: solid 1px #fcd299;
+  // box-shadow: 0 0 2px #fcd299 0px 0px 4px #fcd299, 1px 1px 4px #fcd299,
+  //   2px 2px 4px #fcd299;
+  outline: none;
+}
+
+/* radio buttons */
+.contactForm div.radioBtns {
+  margin: 1em 0;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.radioBtns p {
+  padding-bottom: 0;
+  grid-column: span 3;
+}
+
+input[type="radio"]:first-of-type {
+  margin-left: 0;
+}
+
+/* make the new radio button */
+.radioBtns span:before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  color: $white;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin: -4px 3px 0 0;
+}
+
+.radioBtns label {
+  position: relative;
+  padding-right: 1rem;
+}
+/* hide the default radio buttons */
+.radioBtns input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+/* create the on (selected) state */
+input[type="radio"]:checked ~ span:before {
+  content: "\f192"; /* unicode for fa dot circle */
+}
+
+/* ######### 9b. Footer > Connect ######### */
+.social,
+.contactInfo {
+  background-color: $secondary;
+  color: $black;
+  padding: 1rem 1rem 0;
   text-align: center;
+}
+
+.social h3 {
+  border-bottom: solid 1px $black;
+  font-weight: 400;
+  padding-bottom: 0.25rem;
+}
+
+.socialIcons {
+  font-size: 200%;
+  padding: 1rem 0;
+}
+
+.socialIcons a {
+  color: #223055;
+  padding: 0 0.5rem;
+}
+
+.socialIcons li:hover {
+  color: $primary;
+}
+
+.contactInfo {
+  padding-top: 0;
+}
+
+.contactInfo article {
+  border-top: solid 1px $black;
+  padding: 1rem 0;
+}
+
+.contactInfo h3 {
+  font-weight: 400;
+  margin: auto;
+}
+
+.contactInfo li {
+  font-weight: 300;
+  list-style-type: none;
+}
+
+.copy {
+  font-size: 70%;
+  font-weight: 300;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+/* ############ 10a. Media Query, (min-width: 700px) ############ */
+@media screen and (min-width: 700px) {
+  /* ######### 10a-viii. Footer, Large screen rules ######### */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
+
+  /* .contact {
+} */
+
+  .social h3 {
+    border-bottom: none;
+    padding: 0.5rem 1rem 0.5rem 0;
+    text-align: right;
+  }
+
+  .social article {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    align-items: center;
+  }
+
+  .socialIcons {
+    border-left: solid $white 1px;
+    font-size: 150%;
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+
+  .socialIcons a {
+    display: block;
+  }
+
+  .contactInfo {
+    background-color: $primary;
+    color: $white;
+    padding: 1rem 0 0;
+    grid-column: 1 / -1;
+  }
+}
+
+/* ############ 10b. Media Query, (min-width: 1000px) ############ */
+@media screen and (min-width: 1000px) {
+  /* ######### Footer ######### */
+  .form {
+    display: grid;
+    grid-template-columns: auto minmax(min-content, 580px);
+    grid-template-areas:
+      ". h"
+      ". p"
+      ". f";
+  }
+
+  .form h3 {
+    grid-area: h;
+  }
+
+  .form p.formIntro {
+    grid-area: p;
+  }
+
+  form#contactForm {
+    max-width: initial;
+    grid-area: f;
+    display: grid;
+    grid-template-areas:
+      "name ph"
+      "email news"
+      "radio radio"
+      "msg msg"
+      "btn .";
+    grid-gap: 1rem;
+  }
+
+  .contactForm div {
+    margin-top: 0;
+  }
+
+  .contactForm div:nth-child(1) {
+    grid-area: name;
+  }
+
+  .contactForm div:nth-child(2) {
+    grid-area: ph;
+  }
+
+  .contactForm div:nth-child(3) {
+    grid-area: email;
+  }
+
+  .contactForm div:nth-child(4) {
+    grid-area: radio;
+  }
+
+  .contactForm div:nth-child(5) {
+    grid-area: msg;
+  }
+
+  .contactForm div:nth-child(6) {
+    margin: 1.8rem 0 0;
+    grid-area: news;
+  }
+
+  .contactForm button {
+    width: 100%;
+    grid-area: btn;
+  }
+
+  .contactForm textarea {
+    max-width: 100%;
+  }
+
+  .social article {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .socialIcons {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .socialIcons a {
+    display: inline-block;
+    font-size: 180%;
+  }
 }
