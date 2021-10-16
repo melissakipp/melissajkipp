@@ -2,14 +2,23 @@
 .personal {
   text-align: center;
 }
+
+// .aboutContent {
+//   display: flex;
+//   flex-flow: column wrap;
+//   justify-content: center;
+// }
+
 .personal {
   font-weight: 700;
   margin-bottom: 1.75rem;
 }
 
-/* ############ 10b. Media Query, (min-width: 1000px) ############ */
-@media screen and (min-width: 48rem) {
-  .about-content {
-    height: 90vh;
+.resumeLink {
+  background-color: $bg;
+  color: $white;
+  padding: 0.45rem;
+  &:hover {
+    background-color: $primary;
   }
 }

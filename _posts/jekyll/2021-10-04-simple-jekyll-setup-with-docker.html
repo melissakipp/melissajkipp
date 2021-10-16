@@ -1,0 +1,136 @@
+---
+layout: post
+title: "A Simple Jekyll Setup with Docker"
+date: 2021-10-04 15:09:12 +0000
+categories: jekyll
+tags: Pinned
+author: Melissa Kipp
+description: As I was starting my journey to learning to code, I was downloading and installing everything that was recommended. Once it was time for a new computer, I decided to be diligent on keeping it clean and clutter-free.
+image: /assets/images/arizona-gallery-2.jpg
+image-alt: "Desert flower"
+---
+
+<figure>
+  <img class="center-img" src="/assets/images/arizona-gallery-2.jpg" alt="" />
+</figure>
+
+<p>
+  As a beginner I was taking several courses on a variety of topics. It seemed
+  each course wanted to teach you by using different languages and by using
+  different development approaches for the course’s example projects. Learning
+  how to use Docker on a basic level has helped keep less clutter on my computer
+  and help expand my learning path.<br /><br />
+  <a href="https://docs.docker.com/get-started/">Learn More</a> about Docker.
+</p>
+
+<aside>
+  <header><strong>Learning Course:</strong></header>
+  <p>
+    <a
+      href="https://www.udemy.com/share/101Wek3@zOLvOQI0uRo0dS7jlYFt3X3gKAqQmMcditgCfJKL3Ccn3jdc3MYD1k_dy-SYOIa0/"
+      >Udemy - Docker Mastery: with Kubernetes + Swarm from a Docker Captain</a
+    >
+  </p>
+</aside>
+
+<h2>Steps To Creating a Dockerfile for a Jekyll Development Environment</h2>
+
+<ol>
+  <li>
+    Create your project folder
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ mkdir project-name</code></pre>
+    </figure>
+  </li>
+  <li>
+    Move into our project directory
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ cd project-name</code></pre>
+    </figure>
+  </li>
+  <li>
+    Run Docker command
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ docker run --rm -v $(pwd):/site bretfisher/jekyll new .</code></pre>
+    </figure>
+    <ul>
+      <li>
+        TIP: this must be ran in an empty directory. Do not put any
+        dockerfile/docker-compose files in the directory yet.
+      </li>
+      <li>This install basic necessities to start a Jekyll site.</li>
+      <li>
+        `--rm` flag will remove this container once it is done installing the
+        basic Jekyll files.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Make sure you are still in the project folder
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ pwd</code></pre>
+    </figure>
+  </li>
+  <li>
+    Make docker-compose.yml file
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ touch docker-compose.yml</code></pre>
+    </figure>
+  </li>
+  <li>
+    Open YAML file in Vim
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ vi docker-compose.yml</code></pre>
+    </figure>
+    <figure class="screenshot">
+      <pre><code class="language-yaml">
+version: "2.7"
+
+services:
+  jekyll:
+    image: bretfisher/jekyll-serve
+    volumes:
+      - .:/site
+    ports:
+      - "8080:4000"
+      </code></pre>
+    </figure>
+  </li>
+  <li>
+    File Permissions
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ sudo chmod -R 777 .</code></pre>
+    </figure>
+  </li>
+  <li>
+    Permissions
+    <figure class="screenshot">
+      <pre><code class="language-shell">$ docker-compose up -d</code></pre>
+    </figure>
+    <ul>
+      <li>NOTE: I add -d flag so that it runs detach.</li>
+    </ul>
+  </li>
+</ol>
+<!-- end of steps -->
+
+<h3>Tip:</h3>
+<figure class="screenshot">
+  <pre><code class="language-yaml">
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - docker-compose
+  - README.md
+  - .dockerignore
+  - .gitignore
+  </code></pre>
+</figure>

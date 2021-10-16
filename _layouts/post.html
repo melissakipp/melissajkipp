@@ -7,7 +7,7 @@
     <!-- navigation -->
     {% include navigation.html %}
 
-    <main class="post-main">
+    <main class="post-main centered">
       <h1 class="post-title">{{ page.title }}</h1>
       <hr />
       <section class="post-info">
@@ -43,7 +43,9 @@
           </li>
         </ul>
       </section>
-      <p><strong>Quick Summary:</strong> {{ page.description }}</p>
+      <p class="post-summary">
+        <strong>Quick Summary:</strong> {{ page.description }}
+      </p>
       <hr />
       <article class="post-content">{{ content }}</article>
     </main>

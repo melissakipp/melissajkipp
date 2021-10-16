@@ -1,13 +1,20 @@
 /* ############ Mobile-First - Post ############ */
-.post-content ul,
-ol {
-  margin: 0 2rem 2rem;
-  padding: 0;
+.post-content {
+  margin: 2rem;
+  // & ol {
+  //   margin: 2rem;
+  //   padding: 0;
+  //   & li {
+  //     padding-bottom: 3rem;
+  //   }
 }
 
 .center-img {
   margin: 0 0 2em 0;
   width: 100%;
+}
+.post-content ul li:last-of-type {
+  margin-bottom: 2rem;
 }
 
 .post-info {
@@ -20,6 +27,10 @@ ol {
       text-align: center;
     }
   }
+}
+
+.post-summary {
+  margin: 2rem;
 }
 
 blockquote {
