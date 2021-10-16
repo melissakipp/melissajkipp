@@ -69,8 +69,38 @@ i {
   padding-left: 0.5rem;
 }
 
-// @media screen and (min-width: 48rem) {
+.centered {
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.width {
+  max-width: 1440px;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+/* ############ Media Query, (min-width: 700px) ############ */
+// @media screen and (min-width: 43.75rem) {
 // }
 
-// @media screen and (min-width: 70rem) {
-// }
+/* ############ Media Query, (min-width: 768px) ############ */
+@media screen and (min-width: 48rem) {
+  .centered {
+    max-width: 48em;
+  }
+}
+
+/* ############ Media Query, (min-width: 1000px) ############ */
+@media screen and (min-width: 62.5rem) {
+  .code-snippets {
+    margin-left: 5rem;
+    max-width: 52em;
+  }
+}
