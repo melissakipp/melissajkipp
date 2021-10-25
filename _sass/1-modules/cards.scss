@@ -1,10 +1,89 @@
+/* ############ Blog Cards - Feature ############ */
+.featured {
+  padding: 1rem;
+  margin: auto;
+}
+
+.featured article {
+  margin: 2rem auto;
+  max-width: 62.5em;
+  width: 80%;
+}
+
+.featured h2 {
+  color: $bg;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+.featured article p {
+  border-left: solid 1px #dedede;
+  padding-left: 1rem;
+}
+
+.featuredList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 1rem;
+  list-style-type: none;
+  & li img {
+    width: 100%;
+  }
+  & li {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    border: solid 1px $color-border;
+    box-shadow: 0 2px 5px $gray-1-hsla;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(140px, 1fr) auto;
+    padding: 1.8rem;
+    &:hover {
+      box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+    }
+  }
+  & h3 {
+    align-self: end;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $primary;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(51, 51, 51, 0.2);
+  }
+  & a {
+    align-items: center;
+    border-radius: 3px;
+    background-color: $primary;
+    color: $white;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.25rem;
+    text-decoration: none;
+  }
+}
+
+.featuredList h3,
+.featuredList img {
+  grid-row: 1 / 2;
+  grid-column: 1;
+}
+
+.read-more:hover {
+  background-color: #333;
+}
+
+/* ############ Frontend Developer Cards ############ */
 .card {
   background: $gray-1-hsla;
   border-radius: 6px;
-  list-style-type: none;
-  margin-bottom: 1em;
   display: flex;
   flex: 0 1 calc(50% - 0.5em);
+  list-style-type: none;
+  margin-bottom: 1em;
 }
 
 .card a {
@@ -28,8 +107,8 @@
 
 .thumbnail img {
   border-radius: 6px 6px 0 0;
-  max-width: 90vw;
   height: auto;
+  max-width: 90vw;
 }
 
 .cards {
@@ -55,29 +134,145 @@
   }
 }
 
-/* ############ Media Query ############ */
+/* ############ Design Cards ############ */
+.design-container h3 {
+  display: block;
+  padding: 0 0 2rem 0;
+  text-align: center;
+  width: 100vw;
+}
 
-/* ############ Media Query, (min-width: 768px) ############ */
-// @media screen and (min-width: 48em) {
+.design-container {
+  margin: auto;
+  padding: 1rem;
+}
+.design-carousel {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
 
-// }
+.carousel__item {
+  background-color: #333;
+  border-radius: 6px;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  color: $gray-1;
+  height: 65vh;
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+  width: 400px;
+  & span {
+    margin-left: 1rem;
+  }
+  & a {
+    align-items: center;
+    border-radius: 3px;
+    background-color: $primary;
+    color: $white;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0.25rem;
+    text-decoration: none;
+  }
+}
+
+.card__img-containter {
+  margin: -2rem -2rem 1rem -2rem;
+}
+
+.card__line {
+  animation: LineFadeIn 0.8s 0.8s forwards ease-in;
+  opacity: 0;
+}
+
+.card__img {
+  animation: ImageFadeIn 0.8s 1.4s forwards;
+  opacity: 0;
+  width: auto;
+}
+
+.card__title {
+  color: $white;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+}
+
+.card__content {
+  animation: ContentFadeIn 0.8s 1.6s forwards;
+  margin-top: -1rem;
+  opacity: 0;
+}
+
+.card__svg {
+  left: 0;
+  top: 6vh;
+  position: absolute;
+}
+
+@keyframes LineFadeIn {
+  0% {
+    opacity: 0;
+    d: path(
+      "M 0 300 Q 0 300 0 300 Q 0 300 0 300 C 0 300 0 300 0 300 Q 0 300 0 300 "
+    );
+    stroke: $white;
+  }
+  50% {
+    opacity: 1;
+    d: path(
+      "M 0 300 Q 50 300 100 300 Q 250 300 350 300 C 350 300 500 300 650 300 Q 750 300 800 300"
+    );
+    stroke: $primary;
+  }
+  100% {
+    opacity: 1;
+    d: path(
+      "M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400"
+    );
+    stroke: $bg;
+  }
+}
+
+@keyframes ContentFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ImageFadeIn {
+  0% {
+    filter: blur(2px);
+    opacity: 0;
+    transform: translate(-0.5rem, -0.5rem) scale(1.05);
+  }
+  50% {
+    filter: blur(2px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 
 /* ############ Media Query, (min-width: 768px) ############ */
 @media screen and (min-width: 60em) {
-  // .cards {
-  //   margin-top: inherit;
-  // }
-
   .card {
     flex: 0 0 calc(33% - 1em);
-    // margin-bottom: 2em;
-    // margin: 2rem 3rem;
-    // padding: 1rem 3rem;
   }
-  // .thumbnail img {
-  //   max-width: 30vw;
-  // }
 }
+
 /* ############ Media Query, (min-width: 1000px) ############ */
 @media screen and (min-width: 62.5em) {
   .thumbnail img {
