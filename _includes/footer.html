@@ -8,18 +8,20 @@
     </p>
     <!-- Form  -->
     <form action="#" method="post" id="contactForm" class="contactForm">
-      <div>
-        <label for="fullName">Your Name:</label>
-        <input type="text" name="fullName" id="fullName" required />
-      </div>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <div>
+          <label for="fullName">Your Name:</label>
+          <input type="text" name="fullName" id="fullName" required />
+        </div>
 
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required />
-      </div>
-
-      <div class="radioBtns">
-        <p>Type of Project:</p>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+      </fieldset>
+      <fieldset class="radioBtns">
+        <legend>Type of Project:</legend>
         <label for="contactEmail">
           <input type="radio" name="contact" id="contactEmail" value="email" />
           <span></span>
@@ -31,22 +33,24 @@
           <span></span>
           Design
         </label>
-      </div>
+      </fieldset>
 
-      <div>
+      <fieldset>
+        <legend>Details about your request</legend>
         <label for="msg">Your Message / Question:</label>
         <textarea name="msg" id="msg"></textarea>
-      </div>
+      </fieldset>
 
-      <div class="checks">
+      <fieldset class="checks">
+        <legend>Security Check</legend>
         <input type="checkbox" name="newsletter" id="newsletter" />
         <!-- above input was 'chekced' -->
         <span></span>
         <label for="newsletter">I am a human.</label>
-      </div>
+      </fieldset>
 
       <button type="submit" value="Send Message" form="contactForm">
-        <i class="fa fa-paper-plane"></i> Send Request
+        <span class="fa fa-paper-plane"></span> Send Request
       </button>
     </form>
   </section>

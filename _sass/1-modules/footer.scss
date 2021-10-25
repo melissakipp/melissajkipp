@@ -18,11 +18,12 @@ form#contactForm {
   margin: auto;
 }
 
-.contactForm div {
+.contactForm fieldset {
   margin-top: 1em;
+  border: none;
 }
 
-.contactForm div:first-of-type {
+.contactForm fieldset:first-of-type {
   margin-top: 0;
 }
 
@@ -57,6 +58,9 @@ form#contactForm {
   display: flex;
   align-items: center;
   justify-content: center;
+  & span {
+    margin-right: 0.75rem;
+  }
 }
 
 .contactForm button:hover {
