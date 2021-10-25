@@ -22,8 +22,8 @@ navigation_weight: 2
   <hr />
   <section class="categoryExpoSection">
     {% for category in site.categories %}
+    <h2 id="{{ categories[0] | slugify }}">{{ category | first }}</h2>
     <ul>
-      <h2 id="{{ categories[0] | slugify }}">{{ category | first }}</h2>
       {% for post in category[1] %}
       <li>&ndash;&nbsp;<a class="archive" href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}

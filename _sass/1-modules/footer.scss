@@ -116,7 +116,7 @@ input[type="checkbox"]:checked ~ span:before {
 
 .contactForm input:focus,
 .contactForm textarea:focus {
-  border: solid 1px #fcd299;
+  border: solid 1px $secondary;
   // box-shadow: 0 0 2px #fcd299 0px 0px 4px #fcd299, 1px 1px 4px #fcd299,
   //   2px 2px 4px #fcd299;
   outline: none;
@@ -167,7 +167,7 @@ input[type="radio"]:checked ~ span:before {
 
 /* ######### 9b. Footer > Connect ######### */
 .social,
-.contactInfo {
+.contact-info {
   background-color: $secondary;
   color: $black;
   padding: 1rem 1rem 0;
@@ -194,21 +194,21 @@ input[type="radio"]:checked ~ span:before {
   color: $primary;
 }
 
-.contactInfo {
+.contact-info {
   padding-top: 0;
 }
 
-.contactInfo article {
+.contact-info article {
   border-top: solid 1px $black;
   padding: 1rem 0;
 }
 
-.contactInfo h3 {
+.contact-info h3 {
   font-weight: 400;
   margin: auto;
 }
 
-.contactInfo li {
+.contact-info li {
   font-weight: 300;
   list-style-type: none;
 }
@@ -255,9 +255,8 @@ input[type="radio"]:checked ~ span:before {
     display: block;
   }
 
-  .contactInfo {
-    background-color: $primary;
-    color: $white;
+  .contact-info {
+    background-color: $white;
     padding: 1rem 0 0;
     grid-column: 1 / -1;
   }

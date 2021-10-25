@@ -11,11 +11,11 @@ $green: #008a65;
 // $cyan: #0dcaf0;
 $white: #fcfcfc;
 $gray: #d8dfe2;
-// $gray-dark: #333333;
-$primary: #6f5091;
-$secondary: #fcd299;
+$gray-dark: #333333;
+$primary: #1f3473; //changed
+$secondary: #f2ea7e; //changed
 $success: #587e51;
-$info: #4f6c86;
+$info: #3b74bf; //changed
 $warning: #fcd299;
 $danger: #ed3a3d;
 $light: rgba(248, 246, 250, 0.8);
@@ -51,7 +51,7 @@ $lite-box: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 $radius: 8px;
 
 // gradient
-$bg: rgb(52, 21, 87);
+$bg: rgb(97, 31, 115); //changed
 $bg-g: linear-gradient(
   90deg,
   rgba(52, 21, 87, 1) 0%,
