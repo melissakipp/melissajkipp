@@ -5,7 +5,7 @@ date: 2021-10-08 15:09:12 +0000
 categories: jekyll
 tags: Pinned
 author: Jekyll
-description: Mentors for web development students. A list of my top 5 mentors that have helped me. I have been on a self-study of learning how to code, these are they people that I kept a close eye on.
+description: Mentors for web development students. A list of my top 5 mentors that have helped me. I have learned through a self-study style of learning how to code. These are they people that I have kept a close eye on.
 image: /assets/images/arizona-gallery-4.jpg
 image-alt: "Desert flower"
 ---
