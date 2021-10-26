@@ -3,27 +3,29 @@
   {% include head.html %}
   <body>
     <!-- header / hero -->
-    <header class="hero" id="home">
-      <article>
-        <h1 class="sr-only">Melissa Kipp</h1>
-        <span><img src="../assets/images/mjk-logo-bk_final.png" alt="" /></span>
-
-        <p>
-          Hey there, I'm a frontend developer based in Phoenix, AZ and I'm
-          driven by curiosity of all things on the web. I am passionate about
-          accessibility and my career goal is to create beautiful websites that
-          are open for everyone.
-        </p>
-        <a class="cta-btn" href="#"
-          >Featured Project<span class="fas fa-angle-double-right"></span
-        ></a>
-      </article>
+    <header>
+      <!-- navigation -->
+      {% include navigation.html %}
+      <section class="hero">
+        <div class="hero-items">
+          <h1 class="sr-only">Melissa Kipp</h1>
+          <span
+            ><img src="../assets/images/mjk-logo-bk_final.png" alt=""
+          /></span>
+          <p>
+            Hey there, I'm a frontend developer based in Phoenix, AZ and I'm
+            driven by curiosity of all things on the web. I am passionate about
+            accessibility and my career goal is to create beautiful websites
+            that are open for everyone.
+          </p>
+          <a class="cta-btn" href="#"
+            >Featured Project<span class="fas fa-angle-double-right"></span
+          ></a>
+        </div>
+      </section>
     </header>
 
-    <!-- navigation -->
-    {% include navigation.html %}
-
-    <main>{{ content }}</main>
+    <main id="main">{{ content }}</main>
 
     <!-- Footer -->
     {% include footer.html %}
