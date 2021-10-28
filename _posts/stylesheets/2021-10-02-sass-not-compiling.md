@@ -6,11 +6,11 @@ categories: stylesheets
 tags: Pinned
 author: Melissa Kipp
 description: These are some errors I came across when learning Sass. As a beginner, the current list of projects that I have used Sass in development are my personal portfolio site using Jekyll and NodeJS.
-image: /assets/images/arizona-gallery-5.jpg
+image: /assets/images/arizona-gallery-5.webp
 image-alt: "Desert flower"
 ---
 
-![desert flower](/assets/images/arizona-gallery-5.jpg){: .center-img}
+![desert flower](/assets/images/arizona-gallery-5.webp){: .center-img}
 
 Being a newbie, there has been some head banging frustrations along the way, but with every obstacle there is always light at the end of the tunnel.
 

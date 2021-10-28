@@ -18,21 +18,25 @@ form#contactForm {
   margin: auto;
 }
 
-.contactForm fieldset {
+.contact-form fieldset {
   margin-top: 1em;
   border: none;
+  & legend {
+    font-weight: 700;
+  }
 }
 
-.contactForm fieldset:first-of-type {
+.contact-form fieldset:first-of-type {
   margin-top: 0;
 }
 
-.contactForm label {
+.contact-form label {
   display: block;
+  margin: 0 0 1rem 0;
 }
 
-.contactForm input,
-.contactForm textarea {
+.contact-form input,
+.contact-form textarea {
   border: solid 1px #dedede;
   border-radius: 4px;
   cursor: text;
@@ -42,97 +46,57 @@ form#contactForm {
   width: 100%;
 }
 
-.contactForm textarea {
+.contact-form textarea {
   min-height: 100px;
 }
 
-.contactForm button {
-  background-color: $primary;
+.contact-form button {
+  align-items: center;
+  background-color: $white;
   border: none;
   border-radius: 4px;
-  color: $white;
-  font-size: 1rem;
-  padding: 0.5rem;
-  min-width: 200px;
-  width: 50%;
   display: flex;
-  align-items: center;
+  font-size: 1rem;
   justify-content: center;
+  // min-width: 200px;
+  padding: 0.5rem;
+  width: 50%;
   & span {
     margin-right: 0.75rem;
   }
 }
 
-.contactForm button:hover {
-  background-color: #333;
+.contact-form button:hover {
+  background-color: $info;
+  color: $white;
 }
 
-.contactForm i {
-  font-size: 200%;
-  padding-right: 0.5rem;
-}
-
-.contactForm input[type="submit"]:active {
+.contact-form input[type="submit"]:active {
   box-shadow: $lite-box;
 }
 
-.contactForm .checks {
+.contact-form .checks {
   margin: 0.25em 0 1em 0.1em;
 }
 
-.contactForm input[type="checkbox"] + label {
-  display: inline-block;
-  padding-top: 0;
-  margin-top: 0;
-}
-
-/* custom checkbox */
-.contactForm .checks label {
-  display: inline-block;
-}
-
-.contactForm input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 20px;
-  height: 20px;
-  margin: 1px 0 0 -1px;
-}
-
-input[type="checkbox"]:checked ~ span:before {
-  content: "\f14a";
-}
-
-.checks span:before {
-  display: inline-block;
-  box-sizing: border-box;
-  color: $white;
-  content: "\f0c8";
-  font-family: "Font Awesome 5 Free";
-  font-size: 1.3em;
-  margin: -3px 3px 0 0;
-  vertical-align: middle;
-}
-
-.contactForm input:focus,
-.contactForm textarea:focus {
-  border: solid 1px $secondary;
-  // box-shadow: 0 0 2px #fcd299 0px 0px 4px #fcd299, 1px 1px 4px #fcd299,
-  //   2px 2px 4px #fcd299;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 5px double $info;
+  box-shadow: 0 0 2px #fcd299 0px 0px 4px #fcd299, 1px 1px 4px #fcd299,
+    2px 2px 4px #fcd299;
   outline: none;
 }
 
 /* radio buttons */
-.contactForm div.radioBtns {
-  margin: 1em 0;
-  max-width: 400px;
+.contact-form fieldset.radio-btns {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
 
-.radioBtns p {
+.radio-btns {
   padding-bottom: 0;
+  margin-bottom: 0;
   grid-column: span 3;
 }
 
@@ -140,35 +104,74 @@ input[type="radio"]:first-of-type {
   margin-left: 0;
 }
 
-/* make the new radio button */
-.radioBtns span:before {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  content: "\f111";
-  color: $white;
-  font-size: 1.2em;
-  vertical-align: middle;
-  margin: -4px 3px 0 0;
+/* The radio container */
+label.radio-container {
+  display: flex;
+  cursor: pointer;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 1.5rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-.radioBtns label {
-  position: relative;
-  padding-right: 1rem;
-}
-/* hide the default radio buttons */
-.radioBtns input[type="radio"] {
+/* Hide the browser's default radio button */
+.radio-container input {
   position: absolute;
   opacity: 0;
+  cursor: pointer;
 }
-/* create the on (selected) state */
-input[type="radio"]:checked ~ span:before {
-  content: "\f192"; /* unicode for fa dot circle */
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: $info;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $white;
 }
 
 /* ######### 9b. Footer > Connect ######### */
 .social,
 .contact-info {
-  background-color: $warning;
+  background-color: $yellow;
   color: $black;
   padding: 1rem 1rem 0;
   text-align: center;
@@ -180,20 +183,25 @@ input[type="radio"]:checked ~ span:before {
   padding-bottom: 0.25rem;
 }
 
-.socialIcons {
+.social-icons {
   font-size: 200%;
   padding: 1rem 0;
+  list-style-type: none;
 }
 
-.socialIcons a {
-  color: #223055;
-  padding: 0 0.5rem;
+.social-icons li {
+  display: inline-block;
+  & a {
+    color: $black;
+    padding: 0 0.5rem;
+  }
 }
 
-.socialIcons li:hover {
+.social-icons li a:hover {
   color: $primary;
 }
 
+/* ######### 9c. Footer > Contact ######### */
 .contact-info {
   padding-top: 0;
 }
@@ -226,7 +234,7 @@ input[type="radio"]:checked ~ span:before {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.25fr;
+    grid-template-rows: 1fr 0.05fr;
   }
 
   /* .contact {
@@ -257,7 +265,6 @@ input[type="radio"]:checked ~ span:before {
 
   .contact-info {
     background-color: $white;
-    padding: 1rem 0 0;
     grid-column: 1 / -1;
   }
 }
@@ -276,10 +283,12 @@ input[type="radio"]:checked ~ span:before {
 
   .form h3 {
     grid-area: h;
+    text-align: center;
   }
 
-  .form p.formIntro {
+  .form p.form-intro {
     grid-area: p;
+    text-align: center;
   }
 
   form#contactForm {
@@ -287,49 +296,35 @@ input[type="radio"]:checked ~ span:before {
     grid-area: f;
     display: grid;
     grid-template-areas:
-      "name ph"
-      "email news"
+      "contact contact"
       "radio radio"
       "msg msg"
-      "btn .";
-    grid-gap: 1rem;
+      ". btn";
+    gap: 1rem;
   }
 
-  .contactForm div {
+  .contact-form fieldset {
     margin-top: 0;
   }
 
-  .contactForm div:nth-child(1) {
-    grid-area: name;
+  .contact-form fieldset:nth-child(1) {
+    grid-area: contact;
   }
 
-  .contactForm div:nth-child(2) {
-    grid-area: ph;
-  }
-
-  .contactForm div:nth-child(3) {
-    grid-area: email;
-  }
-
-  .contactForm div:nth-child(4) {
+  .contact-form fieldset:nth-child(2) {
     grid-area: radio;
   }
 
-  .contactForm div:nth-child(5) {
+  .contact-form fieldset:nth-child(3) {
     grid-area: msg;
   }
 
-  .contactForm div:nth-child(6) {
-    margin: 1.8rem 0 0;
-    grid-area: news;
-  }
-
-  .contactForm button {
-    width: 100%;
+  .contact-form button {
     grid-area: btn;
+    width: 100%;
   }
 
-  .contactForm textarea {
+  .contact-form textarea {
     max-width: 100%;
   }
 
@@ -340,12 +335,12 @@ input[type="radio"]:checked ~ span:before {
     justify-content: center;
   }
 
-  .socialIcons {
+  .social-icons {
     border-left: none;
     padding-left: 0;
   }
 
-  .socialIcons a {
+  .social-icons a {
     display: inline-block;
     font-size: 180%;
   }

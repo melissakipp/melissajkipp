@@ -1,161 +1,106 @@
 /* ############ Mobile-First - Navigation ############ */
-.logo {
-  max-width: 48px;
-}
 
-.navWrap {
+#primary-nav {
+  background: $bg-g;
+  display: grid;
+  grid-template-columns: max-content 1fr;
   align-items: center;
-  background: $bg;
-  box-shadow: 0px 1px 8px $gray-3-rgba;
-  display: flex;
-  height: 7vh;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 99;
+  justify-content: center;
+  padding: 1rem;
+  a .logo {
+    width: 64px;
+    height: 64px;
+  }
+  & .main-nav {
+    grid-column: 1 / span 2;
+    & ul {
+      align-content: center;
+      background: $bg-g; //#262262;
+      // display: block; // Once the menu gets bigger
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(91px, 1fr));
+      list-style-type: none;
+      & li a {
+        color: $white;
+        display: block;
+        font-weight: 700;
+        padding: 0.75rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.4s ease-in;
+      }
+    }
+  }
 }
 
-input#navToggle {
+#primary-nav ul li a:hover,
+#primary-nav ul li a:focus {
+  background: $black;
+}
+
+#primary-nav ul li a:active {
+  border: 2px solid $secondary;
+}
+
+#hamburger {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-self: end;
+  margin: 1rem 2rem 1rem 0;
+}
+
+#hamburger #expanded {
   display: none;
 }
 
-input#navToggle ~ label {
-  height: 1.25rem;
-  padding: 0.25rem;
+#hamburger svg {
+  width: 3em;
+  height: 3em;
+}
+
+#hamburger span {
+  display: block;
   position: relative;
-  width: 2rem;
 }
 
-input#navToggle ~ label > span,
-input#navToggle ~ label > span::before,
-input#navToggle ~ label > span::after {
-  content: "";
+#hamburger[aria-expanded="true"] span {
+  position: static;
+}
+
+#hamburger[aria-expanded="true"] #expanded {
   display: block;
-  position: absolute;
-  top: 0.75rem;
-  height: 0.125rem;
-  width: 1.75rem;
-  opacity: 1;
-  background: $white;
-  transition: 0.14s ease-in-out;
 }
 
-input#navToggle ~ label > span::before {
-  top: -0.5rem;
-}
-
-input#navToggle ~ label > span::after {
-  top: 0.5rem;
-}
-
-#navToggle:checked ~ label > span {
-  width: 0;
-  background: rgba(18, 18, 18, 0);
-}
-
-#navToggle:checked ~ label > span::before {
-  transform: rotateZ(45deg);
-  top: 0;
-}
-
-#navToggle:checked ~ label > span::after {
-  transform: rotateZ(-45deg);
-  top: 0;
-}
-
-#navToggle:checked ~ nav {
-  left: 0;
-}
-
-nav {
-  left: -110%;
-  padding: 1rem 0;
-  position: absolute;
-  top: 3rem;
-  transition: 0.22s ease-in-out;
-  width: 100%;
-  z-index: -1;
-}
-
-nav::after {
-  background-color: $white;
-  background-size: cover;
-  content: "";
-  height: 100vh;
-  position: absolute;
-  top: 10px;
-  width: 100vw;
-  z-index: -1;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li a {
-  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
-  color: $black;
-  display: inline-block;
-  font-size: 1.15rem;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  transition: 0.14s ease-in-out;
-  width: 100%;
-}
-
-nav ul li a:hover {
-  color: $secondary;
-}
-
-nav ul li:last-of-type::before {
-  content: "";
+#hamburger[aria-expanded="true"] + .main-nav {
   display: block;
-  padding: 0.5rem;
 }
 
-a.active {
-  border-bottom: 2px solid $secondary;
+.js-enabled .main-nav {
+  display: none;
 }
 
 /* ############ 10a. Media Query, (min-width: 700px) ############ */
 @media screen and (min-width: 43.75rem) {
-  .navWrap {
-    display: grid;
-    grid-template-columns: 100px minmax(auto, 48rem);
-    justify-content: center;
-  }
-
-  .navToggleLabel {
+  #hamburger {
     display: none;
   }
-
-  nav {
-    position: initial;
-    padding: 0;
+  .js-enabled .main-nav {
+    display: block;
   }
 
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-  }
-
-  nav ul li a {
-    border: none;
-    color: $white;
-    margin-left: 1rem;
-  }
-
-  nav ul li a:hover {
-    background: transparent;
-  }
-
-  nav::after,
-  nav ul li:last-of-type::before {
-    display: none;
-    padding: initial;
+  #primary-nav {
+    display: block;
+    & .container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      & a .logo {
+        height: 90px;
+        margin: 0 0 0.5rem 0;
+        width: 90px;
+      }
+    }
   }
 }

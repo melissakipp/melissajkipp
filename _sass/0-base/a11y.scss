@@ -1,9 +1,33 @@
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
+/* anchor focus */
+a:focus {
+  outline: 8px double $info;
+}
+
+svg[title="External Link"] {
+  width: 18px;
+  height: auto;
+  margin: 0 0 0 0.3125rem;
+}
+
+.double-arrow-icon svg,
+.send svg {
+  width: 18px;
+  height: auto;
+  display: inherit;
+  justify-content: baseline;
+}
+
+svg[data-prefix="fab"] {
+  width: 44px;
+  height: auto;
+}
+
 /* Text meant only for screen readers */
 .skip-link {
-  background: #319795;
+  background-color: $info;
   color: #fff;
   font-weight: 700;
   left: 50%;

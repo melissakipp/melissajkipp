@@ -18,7 +18,7 @@ $success: #587e51;
 $info: #3b74bf; //changed
 $warning: #fcd299;
 $danger: #ed3a3d;
-$light: rgba(248, 246, 250, 0.8);
+$light: rgba(248, 246, 250, 1);
 // $dark: #230216;
 $black: #101820;
 $bg-danger: rgba(240, 56, 70, 0.2);
@@ -52,13 +52,36 @@ $radius: 8px;
 
 // gradient
 $bg: rgb(37, 22, 89); //changed
+$bg-light: rgba(31, 52, 115, 0.9); //changed
+// $bg-g: linear-gradient(
+//   90deg,
+//   rgba(52, 21, 87, 1) 0%,
+//   rgba(111, 80, 145, 1) 40%,
+//   rgba(151, 78, 140, 1) 92%,
+//   rgba(90, 16, 78, 1) 100%
+// );
+
+// $bg: hsla(287, 58%, 29%, 1);
+
 $bg-g: linear-gradient(
   90deg,
-  rgba(52, 21, 87, 1) 0%,
-  rgba(111, 80, 145, 1) 40%,
-  rgba(151, 78, 140, 1) 92%,
-  rgba(90, 16, 78, 1) 100%
+  hsla(287, 58%, 29%, 1) 0%,
+  hsla(225, 58%, 29%, 1) 100%
 );
+
+$bg-g-moz: -moz-linear-gradient(
+  90deg,
+  hsla(287, 58%, 29%, 1) 0%,
+  hsla(225, 58%, 29%, 1) 100%
+);
+
+$bg-g-webkit: -webkit-linear-gradient(
+  90deg,
+  hsla(287, 58%, 29%, 1) 0%,
+  hsla(225, 58%, 29%, 1) 100%
+);
+
+// filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#611F73", endColorstr="#1F3473", GradientType=1 );
 
 // $bg: hsla(283, 96%, 11%, 1);
 // $bg-g: linear-gradient(

@@ -1,79 +1,61 @@
 /* ############ Blog Cards - Feature ############ */
-.featured {
-  padding: 1rem;
-  margin: auto;
-}
-
-.featured article {
-  margin: 2rem auto;
-  max-width: 62.5em;
-  width: 80%;
-}
-
-.featured h2 {
-  color: $primary;
-  font-size: 3rem;
-  margin-left: 1rem;
-}
-
-.featured article p {
-  border-left: solid 1px #dedede;
-  padding-left: 1rem;
-}
-
-.featuredList {
+.featured-list {
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-gap: 1rem;
   list-style-type: none;
-  & li img {
-    width: 100%;
-  }
   & li {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 6px;
     border: solid 1px $color-border;
     box-shadow: 0 2px 5px $gray-1-hsla;
     display: grid;
+    gap: 0.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: auto minmax(140px, 1fr) auto;
+    margin: auto 1rem;
     padding: 1.8rem;
     &:hover {
       box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
     }
-  }
-  & h3 {
-    align-self: end;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: $primary;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(51, 51, 51, 0.2);
-  }
-  & a {
-    align-items: center;
-    border-radius: 3px;
-    background-color: $primary;
-    color: $white;
-    display: flex;
-    height: 2rem;
-    justify-content: center;
-    margin-top: 1rem;
-    padding: 0.25rem;
-    text-decoration: none;
+    & img {
+      width: 100%;
+    }
+    & h4 {
+      align-self: end;
+      background-color: $light;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      margin: 1rem 0;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(51, 51, 51, 0.2);
+    }
+    & p {
+      margin: 1rem 0 0 0;
+    }
+    & a {
+      align-items: center;
+      border-radius: 3px;
+      background-color: $primary;
+      color: $white;
+      display: flex;
+      height: 2rem;
+      justify-content: center;
+      margin-top: 1rem;
+      padding: 0.25rem;
+      text-decoration: none;
+    }
   }
 }
 
-.featuredList h3,
-.featuredList img {
+.featured-list h4,
+.featured-list img {
   grid-row: 1 / 2;
   grid-column: 1;
 }
 
 .read-more:hover {
-  background-color: #333;
+  background-color: $info;
 }
 
 /* ############ Frontend Developer Cards ############ */
@@ -88,10 +70,12 @@
 }
 
 .card {
-  background: $gray-1-hsla;
+  background-color: $gray-1-hsla;
   border-radius: 6px;
   display: flex;
   flex: 0 1 calc(50% - 0.5em);
+  // grid-template-columns: 1fr;
+  // grid-template-rows: auto minmax(140px, 1fr) auto;
   list-style-type: none;
   margin-bottom: 1em;
   & .thumbnail {
@@ -102,18 +86,11 @@
   }
   & .card-content {
     padding: 1rem;
-    & h3 {
+    & h4 {
       text-align: center;
     }
-    & .link__code {
-      background-color: $bg;
-      border: none;
-      border-radius: 6px;
-      color: $white;
-      padding: 0.1rem 0.55rem;
-      &:hover {
-        background-color: $primary;
-      }
+    & .link__code:hover {
+      font-weight: 700;
     }
   }
   &:hover {
@@ -136,6 +113,11 @@
 }
 
 /* ############ Design Cards ############ */
+.design-container {
+  margin: auto;
+  margin: 4rem 0;
+}
+
 .design-container h3 {
   display: block;
   padding: 0 0 2rem 0;
@@ -143,10 +125,6 @@
   width: 100vw;
 }
 
-.design-container {
-  margin: auto;
-  padding: 1rem;
-}
 .design-carousel {
   align-items: center;
   display: flex;
@@ -156,18 +134,15 @@
 }
 
 .carousel__item {
-  background-color: #333;
+  background-color: $black;
   border-radius: 6px;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
-  color: $gray-1;
-  // height: 70vh;
+  color: $white;
+  height: 650px;
   overflow: hidden;
   padding: 2rem;
   position: relative;
   width: 400px;
-  & span {
-    margin-left: 1rem;
-  }
   & a {
     align-items: center;
     border-radius: 3px;
@@ -179,6 +154,10 @@
     margin: 1rem 0;
     padding: 0.25rem;
     text-decoration: none;
+    &:hover {
+      background-color: $info;
+      color: $white;
+    }
   }
 }
 

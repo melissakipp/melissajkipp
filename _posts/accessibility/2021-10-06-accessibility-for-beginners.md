@@ -6,11 +6,11 @@ categories: a11y
 tags: Pinned
 author: "Melissa Kipp"
 description: We can influence the future of the web. Web development is not only about learning syntax. It is about how the website will be used by the end user. The site should be usable to as many people as possible.
-image: /assets/images/arizona-gallery-1.jpg
+image: /assets/images/arizona-gallery-1.webp
 image-alt: "Desert flower"
 ---
 
-![desert flower](/assets/images/arizona-gallery-1.jpg){: .center-img}
+![desert flower](/assets/images/arizona-gallery-1.webp){: .center-img}
 
 ## Writing with Assistive Technology in Mind
 
