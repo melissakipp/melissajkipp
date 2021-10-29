@@ -109,3 +109,51 @@ $font-serif--title: normal normal 700 2.5rem "montserrat", sans-serif;
 $font-serif--nav: normal normal 700 1.2rem "montserrat", sans-serif;
 // $font-monospace--code: normal normal 400 0.95rem "dico-code-two", mono;
 $font-deco--display: normal normal 400 2.5rem/1.75 "wreath", serif;
+
+$typescale: 1.25em;
+
+h1 {
+  font-size: calc(
+    1rem * var($typescale) * var($typescale) * var($typescale) * var($typescale)
+  );
+  line-height: 3.55556rem;
+  margin-bottom: 1.7777777777777777rem;
+  margin-top: 0.88889rem;
+}
+h2 {
+  font-size: calc(1rem * var($typescale) * var($typescale) * var($typescale));
+  line-height: 2.66667rem;
+  margin-bottom: 1.77778rem;
+}
+h3 {
+  font-size: calc(1rem * var($typescale) * var($typescale));
+}
+h3,
+h4 {
+  line-height: 1.77778rem;
+  margin-bottom: 0.88889rem;
+}
+h4 {
+  font-size: calc(1rem * var($typescale));
+  margin-top: 1.77778rem;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 0.88889rem;
+  margin-top: 0.88889rem;
+}
+h5,
+h6 {
+  margin-bottom: 0.88889rem;
+}
+h6 {
+  font-size: calc(1rem / var($typescale));
+  line-height: 1.1;
+}
+.small {
+  font-size: calc(1rem / var($typescale) / var($typescale));
+}
+
+@media screen and (min-width: 624px,) {
+  $typescale: 1.5em;
+}
