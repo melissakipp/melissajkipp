@@ -7,11 +7,14 @@ footer {
   background-color: $bg;
   color: $white;
   padding: 1rem 1rem 2rem;
+  & header {
+    text-align: center;
+    & p {
+      padding-bottom: 1rem;
+    }
+  }
 }
 
-.form p {
-  padding-bottom: 1rem;
-}
 /* ######### Contact Form ######### */
 form#contactForm {
   max-width: 350px;
@@ -58,20 +61,18 @@ form#contactForm {
   display: flex;
   font-size: 1rem;
   justify-content: center;
-  // min-width: 200px;
   padding: 0.5rem;
   width: 50%;
   & span {
     margin-right: 0.75rem;
   }
+  &:hover {
+    background-color: $info;
+    color: $white;
+  }
 }
 
-.contact-form button:hover {
-  background-color: $info;
-  color: $white;
-}
-
-.contact-form input[type="submit"]:active {
+.contact-form button .contact-form input[type="submit"]:active {
   box-shadow: $lite-box;
 }
 
@@ -237,9 +238,6 @@ label.radio-container {
     grid-template-rows: 1fr 0.05fr;
   }
 
-  /* .contact {
-} */
-
   .social h3 {
     border-bottom: none;
     padding: 0.5rem 1rem 0.5rem 0;
@@ -253,13 +251,13 @@ label.radio-container {
     align-items: center;
   }
 
-  .socialIcons {
+  .social-icons {
     border-left: solid $white 1px;
     font-size: 150%;
     padding: 0.5rem 0 0.5rem 1rem;
   }
 
-  .socialIcons a {
+  .social-icons a {
     display: block;
   }
 
@@ -271,40 +269,26 @@ label.radio-container {
 
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
 @media screen and (min-width: 1000px) {
-  /* ######### Footer ######### */
-  .form {
-    display: grid;
-    grid-template-columns: auto minmax(min-content, 580px);
-    grid-template-areas:
-      ". h"
-      ". p"
-      ". f";
-  }
-
-  .form h3 {
-    grid-area: h;
-    text-align: center;
-  }
-
-  .form p.form-intro {
-    grid-area: p;
-    text-align: center;
-  }
-
-  form#contactForm {
+  /* ######### Form ######### */
+  form #contactForm {
     max-width: initial;
-    grid-area: f;
+    // grid-area: f;
     display: grid;
     grid-template-areas:
+      "intro intro"
       "contact contact"
       "radio radio"
       "msg msg"
-      ". btn";
+      ". btn ";
     gap: 1rem;
   }
 
   .contact-form fieldset {
     margin-top: 0;
+  }
+
+  .contact-form header {
+    grid-area: intro;
   }
 
   .contact-form fieldset:nth-child(1) {
@@ -328,6 +312,7 @@ label.radio-container {
     max-width: 100%;
   }
 
+  /* ######### Social Meida ######### */
   .social article {
     max-width: 580px;
     display: flex;

@@ -26,4 +26,22 @@
   <!-- load adobe fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/vfw3tos.css" />
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  <!-- reCaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      document.querySelector("#contactForm").submit();
+    }
+    // How to validate reCaptcha based on score
+    function validateRecaptcha() {
+      const response = grecaptcha.getResponse();
+      if (response.length === 0) {
+        console.log("recaptcha not verified");
+        return false;
+      } else {
+        alert("recaptcha validated");
+        return true;
+      }
+    }
+  </script>
 </head>
