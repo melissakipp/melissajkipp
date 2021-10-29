@@ -1,9 +1,8 @@
-console.log("Hello World");
 // progressive enchancement
 document.body.classList.toggle("js-enabled");
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  let hamburger = document.getElementById("hamburger");
+  let hamburger = document.querySelector("#hamburger");
   // If JS is enabled, it will un-expand the hamburger
   hamburger.setAttribute("aria-expanded", "false");
   hamburger.onclick = function () {

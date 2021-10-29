@@ -1,24 +1,27 @@
-.about-title,
-.personal {
-  text-align: center;
+.about-content {
+  padding: 2rem 0;
+  & article p {
+    margin: 0 0 2rem 0;
+  }
 }
-
-// .aboutContent {
-//   display: flex;
-//   flex-flow: column wrap;
-//   justify-content: center;
-// }
-
 .personal {
   font-weight: 700;
-  margin-bottom: 1.75rem;
+  margin: 1.75rem 0;
+  text-align: center;
+  & h2 {
+    padding: 0 0 1rem 0;
+  }
 }
 
-.resumeLink {
-  background-color: $bg;
+.resume-link {
+  background-color: $primary;
+  border-radius: 6px;
   color: $white;
-  padding: 0.45rem;
+  font-weight: 700;
+  padding: 0.65rem;
+  text-decoration: none;
+  text-transform: uppercase;
   &:hover {
-    background-color: $primary;
+    background-color: $info;
   }
 }
