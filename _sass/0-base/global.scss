@@ -1,21 +1,24 @@
 *,
 ::after,
 ::before {
-  box-sizing: inherit;
-  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  // font-size: 100%;
   margin: 0;
   padding: 0;
 }
 
 html {
-  box-sizing: border-box;
+  box-sizing: inherit;
   font-family: montserrat, sans-serif;
-  font-size: 1em;
+  font-size: 18px;
 }
 
 body {
   color: $black;
   line-height: 1.65;
+  // font-optical-sizing: auto;
   text-rendering: optimizeSpeed;
 }
 
@@ -30,12 +33,12 @@ hr {
   width: 100%;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: 700;
-  // max-width: 48ch;
-}
+// h1,
+// h2,
+// h3 {
+//   font-weight: 700;
+//   // max-width: 48ch;
+// }
 
 // h1 {
 //   font-size: 2.5rem;
@@ -61,7 +64,7 @@ h3 {
 
 p {
   margin: 0 0 1rem 0;
-  max-width: 65ch;
+  max-width: 75ch;
 }
 
 img {
@@ -75,7 +78,7 @@ i {
 
 .centered {
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 .width {
@@ -97,7 +100,7 @@ big {
 /* ############ Media Query, (min-width: 768px) ############ */
 @media screen and (min-width: 48rem) {
   .centered {
-    max-width: 48em;
+    max-width: 48rem;
   }
 }
 
@@ -105,6 +108,6 @@ big {
 @media screen and (min-width: 62.5rem) {
   .code-snippets {
     margin-left: 5rem;
-    max-width: 52em;
+    max-width: 52rem;
   }
 }

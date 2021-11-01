@@ -24,7 +24,6 @@
     $white;
   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  font-size: 1.3rem;
   display: grid;
   grid-template-columns: 10px 2fr 10px;
   grid-template-rows: 2rem 1fr 2rem;
@@ -43,6 +42,7 @@
   background-color: $bg-light;
   border-radius: 18px;
   color: $white;
+  font-size: calc();
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   padding: 1rem 1rem 2rem;
@@ -59,7 +59,6 @@
   border-radius: 6px;
   color: $black;
   display: flex;
-  font-size: 1.15rem;
   justify-content: center;
   letter-spacing: 1px;
   margin: 0.75rem auto 0;
@@ -84,13 +83,11 @@
 }
 
 .cta h3 {
-  font-size: 2.25rem;
   margin-right: 1rem;
 }
 
 .cta p {
   border-left: solid 1px $white;
-  font-size: 1.2rem;
   margin-bottom: 1.5rem;
   max-width: 700px;
   padding-left: 1rem;
@@ -107,36 +104,6 @@
 
 .cta1 {
   margin-top: 0;
-}
-
-/* ############ Gallery ############ */
-.annie {
-  max-width: 1200px;
-  margin: auto auto 3rem auto;
-}
-
-.galleryWrap {
-  background-color: $gray-1-rgba;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 0.5em;
-  grid-auto-flow: row dense;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.galleryWrap .gal_w {
-  grid-column-end: span 2;
-}
-
-.galleryWrap .gal_p {
-  grid-row-end: span 2;
-}
-
-.galleryWrap figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* ############ Media Query ############ */

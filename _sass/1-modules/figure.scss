@@ -1,0 +1,112 @@
+/* ############ Gallery ############ */
+.annie {
+  max-width: 1200px;
+  margin: auto 1rem 3rem auto;
+}
+
+.gallery-wrap {
+  background-color: $gray-1-rgba;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 0.5em;
+  grid-auto-flow: row dense;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-wrap .gal_w {
+  grid-column-end: span 2;
+}
+
+.gallery-wrap .gal_p {
+  grid-row-end: span 2;
+}
+
+.gallery-wrap figure img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+figure {
+  box-shadow: $lite-box;
+  display: block;
+  position: relative;
+  overflow: hidden; /* hide overflowing elements by default */
+}
+
+figure figcaption {
+  background: $white;
+  display: block;
+  font-size: 14px;
+  left: 0;
+  max-height: 100%;
+  padding: 0.25rem;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  top: 50%;
+  -moz-transform: translate3d(
+    -100%,
+    -50%,
+    0
+  ); /* position caption outside layout horizontally and centered vertically */
+  -webkit-transform: translate3d(-100%, -50%, 0);
+  transform: translate3d(-100%, -50%, 0);
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  z-index: 100;
+}
+
+/*** Push Up effect ****/
+figure img {
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+figure figcaption {
+  opacity: 1;
+  top: 100%;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure:hover img {
+  -moz-transform: translate3d(
+    0,
+    -20px,
+    0
+  ); /* move image up vertically a bit for parallax effect */
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  opacity: 0.5;
+}
+
+figure:hover figcaption {
+  box-shadow: 0px -2px 28px rgba(0, 0, 0, 0.3);
+  -moz-transform: translate3d(
+    0,
+    -100%,
+    0
+  ); /* move caption up vertically to fully reveal caption */
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* ############ Media Query, (min-width: 1000px) ############ */
+@media screen and (min-width: 62.5rem) {
+  .annie {
+    margin: auto auto 3rem auto;
+  }
+}

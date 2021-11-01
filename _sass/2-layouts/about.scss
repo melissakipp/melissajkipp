@@ -1,5 +1,5 @@
 .about-content {
-  padding: 2rem 0;
+  padding: 2rem;
   & article p {
     margin: 0 0 2rem 0;
   }
@@ -23,5 +23,6 @@
   text-transform: uppercase;
   &:hover {
     background-color: $info;
+    box-shadow: $lite-box;
   }
 }
