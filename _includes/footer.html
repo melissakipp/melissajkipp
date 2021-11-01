@@ -15,12 +15,24 @@
         <legend>Contact Information</legend>
         <label for="fullName"
           >Your Name:
-          <input type="text" name="fullName" id="fullName" required />
+          <input type="text" name="fullName" id="fullName" autofocus required />
         </label>
+        <div class="contact-form__extra">
+          <span class="contact-form__ex"><small>John Doe</small></span>
+          <span class="contact-form__field--error contact-form__msg--success"
+            ><small>Example error or success placeholder</small></span
+          >
+        </div>
         <label for="email"
           >Email:
           <input type="email" name="email" id="email" required />
         </label>
+        <div class="contact-form__extra">
+          <span class="contact-form__ex"><small>johndoe@email.com</small></span>
+          <span class="contact-form__field--error contact-form__msg--success"
+            ><small>Example error or success placeholder</small></span
+          >
+        </div>
       </fieldset>
       <fieldset class="project-type radio-btns">
         <legend>Type of Project:</legend>
@@ -35,6 +47,13 @@
           <span class="checkmark"></span>
           Design
         </label>
+        <br />
+
+        <div class="contact-form__extra">
+          <span class="contact-form__field--error contact-form__msg--success"
+            ><small>Example error or success placeholder</small></span
+          >
+        </div>
       </fieldset>
 
       <fieldset class="message-box">

@@ -4,8 +4,8 @@ footer {
 }
 /* ######### 9a. Footer > Contact ######### */
 .form {
-  background-color: $bg;
-  color: $white;
+  background-color: $secondary;
+  // color: $white;
   padding: 1rem 1rem 2rem 1rem;
   & header {
     text-align: center;
@@ -22,7 +22,6 @@ form#contactForm {
 }
 
 .contact-form fieldset {
-  margin: 1rem 0;
   border: none;
   & legend {
     font-weight: 700;
@@ -34,8 +33,9 @@ form#contactForm {
 }
 
 .contact-form label {
+  cursor: pointer;
   display: block;
-  margin: 0 0 1rem 0;
+  // margin: 0 0 1rem 0;
 }
 
 .contact-form input,
@@ -71,6 +71,16 @@ form#contactForm {
 
 .contact-form button .contact-form input[type="submit"]:active {
   box-shadow: $lite-box;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border: 2px solid $info;
+}
+
+label:focus-within {
+  color: $info;
 }
 
 .contact-form .checks {
@@ -135,7 +145,7 @@ label.radio-container {
 
 /* On mouse-over, add a grey background color */
 .radio-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: $info;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -165,11 +175,24 @@ label.radio-container {
   background: $white;
 }
 
+.contact-form__extra span {
+  display: block;
+}
+
+.contact-form__ex {
+  color: $gray-10;
+}
+
+.contact-form__field--error {
+  // height: 1.15em; // temp height
+  margin: auto auto 1rem auto;
+}
+
 /* ######### 9b. Footer > Connect ######### */
 .social,
 .contact-info {
-  background-color: $yellow;
-  color: $black;
+  background: $bg-g;
+  color: $white;
   padding: 1rem 1rem 0;
   text-align: center;
 }
@@ -189,13 +212,13 @@ label.radio-container {
 .social-icons li {
   display: inline-block;
   & a {
-    color: $black;
+    color: $white;
     padding: 0 0.5rem;
   }
 }
 
 .social-icons li a:hover {
-  color: $primary;
+  color: $secondary;
 }
 
 /* ######### 9c. Footer > Contact ######### */
@@ -258,7 +281,8 @@ label.radio-container {
   }
 
   .contact-info {
-    background-color: $white;
+    background: $white;
+    color: $black;
     grid-column: 1 / -1;
   }
 }
@@ -268,13 +292,13 @@ label.radio-container {
   /* ######### Form ######### */
   form#contactForm {
     display: grid;
-    grid-template-columns: 0.25fr 1fr 0.25fr;
+    grid-template-columns: 0.5fr 1fr;
     grid-template-areas:
-      ". intro ."
-      ". contact ."
-      ". radio ."
-      ". msg ."
-      ". btn .";
+      ". intro"
+      ". contact"
+      ". radio"
+      ". msg"
+      ". btn";
     gap: 0.5rem;
     margin: auto;
   }
