@@ -5,7 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   list-style-type: none;
   & li {
-    background-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 6px;
     border: solid 1px $color-border;
     box-shadow: 0 2px 5px $gray-1-hsla;
@@ -221,7 +221,7 @@
     d: path(
       "M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400"
     );
-    stroke: $bg;
+    stroke: #512d5c;
   }
 }
 

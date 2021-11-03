@@ -2,27 +2,33 @@
 footer {
   margin-top: 3rem;
 }
-/* ######### 9a. Footer > Contact ######### */
+/* #################################################### */
+/* #################### Contact Form ################## */
+/* #################################################### */
 .form {
   background-color: $white;
-  // color: $white;
-  padding: 1rem 1rem 2rem 1rem;
+  border-bottom: 2px solid $black;
+  border-top: 2px solid $black;
+  padding: 1rem 0.25rem 2rem 0.25rem;
   & header {
     text-align: center;
+    h3 {
+      font-size: 2rem;
+    }
     & p {
       padding: 1rem 0;
     }
   }
 }
 
-/* ######### Contact Form ######### */
 form#contactForm {
-  max-width: 550px;
-  margin: auto;
+  max-width: 800px;
+  padding: 0 1rem 0 1rem;
 }
 
 .contact-form fieldset {
   border: none;
+  padding: 0.5rem 0 0.5rem 0;
   & legend {
     font-weight: 700;
   }
@@ -35,15 +41,17 @@ form#contactForm {
 .contact-form label {
   cursor: pointer;
   display: block;
-  // margin: 0 0 1rem 0;
+  span {
+    float: right;
+  }
 }
 
 .contact-form input,
 .contact-form textarea {
-  border: solid 1px #dedede;
+  border: solid 1px $color-border;
   border-radius: 4px;
   cursor: text;
-  max-width: 350px;
+  max-width: 650px;
   padding: 0.5rem;
   width: 100%;
 }
@@ -60,7 +68,9 @@ form#contactForm {
   color: $white;
   display: flex;
   justify-content: center;
+  max-width: 300px;
   padding: 0.5rem;
+  width: 100%;
   & span {
     margin-right: 0.75rem;
   }
@@ -95,11 +105,14 @@ label:focus-within {
   outline: none;
 }
 
+/* ############# */
 /* radio buttons */
-.contact-form fieldset.radio-btns {
+/* ############# */
+.contact-form .radio-btns {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
+  margin: 0 0 2rem 0;
 }
 
 .radio-btns {
@@ -112,7 +125,9 @@ input[type="radio"]:first-of-type {
   margin-left: 0;
 }
 
-/* The radio container */
+/* ############### */
+/* radio container */
+/* ############### */
 label.radio-container {
   display: flex;
   cursor: pointer;
@@ -139,7 +154,7 @@ label.radio-container {
   left: 0;
   height: 20px;
   width: 20px;
-  border: 4px solid $black;
+  border: 2px solid $black;
 
   border-radius: 50%;
 }
@@ -177,20 +192,53 @@ label.radio-container {
   background: $info;
 }
 
-.contact-form__extra span {
-  display: block;
+/* ############### */
+/* Error & Success */
+/* ############### */
+.contact label {
+  input {
+    border: 2px solid $success;
+  }
+  span.success-msg {
+    color: $success;
+    font-size: 1.15rem;
+    visibility: visible;
+  }
+}
+.contact-form__extra {
+  height: auto;
+  margin: 0.15rem 0 0.5rem 0;
+  span {
+    display: block;
+  }
+  span.error-msg {
+    border: 2px dashed $danger;
+    color: $danger;
+    padding: 0 0 0 0.15rem;
+    visibility: visible;
+  }
 }
 
-.contact-form__ex {
-  color: $gray-10;
+/* ################ */
+/* Textarea Counter */
+/* ################ */
+.textarea-caution {
+  border-radius: 4px;
+  background-color: $gray-1-rgba;
+  letter-spacing: 0.04rem;
+  padding: 0.25rem;
+  text-align: center;
 }
 
-.contact-form__field--error {
-  // height: 1.15em; // temp height
-  margin: auto auto 1rem auto;
+.counter {
+  font-size: 1.15em;
+  font-weight: 900;
+  padding-bottom: 0.5em;
 }
 
-/* ######### 9b. Footer > Connect ######### */
+/* #################################################### */
+/* ################## Social Connect ################## */
+/* #################################################### */
 .social,
 .contact-info {
   background: $bg-g;
@@ -223,13 +271,14 @@ label.radio-container {
   color: $secondary;
 }
 
-/* ######### 9c. Footer > Contact ######### */
+/* ############################################ */
+/* ################ Contact-Info ############## */
+/* ############################################ */
 .contact-info {
   padding-top: 0;
 }
 
 .contact-info article {
-  border-top: solid 1px $black;
   padding: 1rem 0;
 }
 
@@ -250,15 +299,20 @@ label.radio-container {
   padding-top: 1rem;
 }
 
-/* ############ 10a. Media Query, (min-width: 700px) ############ */
+/* ####################################################################### */
+/* #################### Media Query, (min-width: 700px) ################## */
+/* ####################################################################### */
 @media screen and (min-width: 700px) {
-  /* ######### 10a-viii. Footer, Large screen rules ######### */
+  /* ################### Footer ################# */
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.05fr;
   }
 
+  /* ############################################ */
+  /* ############### Social Connect ############# */
+  /* ############################################ */
   .social h3 {
     border-bottom: none;
     padding: 0.5rem 1rem 0.5rem 0;
@@ -273,7 +327,7 @@ label.radio-container {
   }
 
   .social-icons {
-    border-left: solid $white 1px;
+    border-left: 1px solid $white;
     font-size: 125%;
     padding: 0.5rem 0 0.5rem 1rem;
   }
@@ -282,6 +336,9 @@ label.radio-container {
     display: block;
   }
 
+  /* ############################################ */
+  /* ################ Contact-Info ############## */
+  /* ############################################ */
   .contact-info {
     background: $white;
     color: $black;
@@ -289,18 +346,20 @@ label.radio-container {
   }
 }
 
-/* ############ 10b. Media Query, (min-width: 1000px) ############ */
+/* ####################################################################### */
+/* ################### Media Query, (min-width: 1000px) ################## */
+/* ####################################################################### */
 @media screen and (min-width: 1000px) {
-  /* ######### Form ######### */
+  /* ######### Contact Form ######### */
   form#contactForm {
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     grid-template-areas:
-      ". intro"
-      ". contact"
-      ". radio"
-      ". msg"
-      ". btn";
+      ". intro intro"
+      ". contact contact"
+      ". radio radio"
+      ". msg msg"
+      ". btn btn";
     gap: 0.5rem;
     margin: auto;
   }
@@ -323,15 +382,15 @@ label.radio-container {
 
   .contact-form .message-box {
     grid-area: msg;
-    max-width: 100%;
   }
 
   .contact-form button {
     grid-area: btn;
-    width: 100%;
   }
 
-  /* ######### Social Meida ######### */
+  /* ######################################## */
+  /* ############# Social Connect ########### */
+  /* ######################################## */
   .social article {
     max-width: 580px;
     display: flex;

@@ -30,8 +30,10 @@
 }
 
 hr {
-  color: $bg;
-  border-width: 0.12rem;
+  // color: $bg;
+  background: $purple;
+  height: 0.15rem;
+  border-width: 0;
   margin: 0.5rem auto 0.5rem auto;
 }
 

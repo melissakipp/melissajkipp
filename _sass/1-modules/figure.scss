@@ -28,14 +28,14 @@
   width: 100%;
 }
 
-figure {
+.gallery-wrap figure {
   box-shadow: $lite-box;
   display: block;
   position: relative;
   overflow: hidden; /* hide overflowing elements by default */
 }
 
-figure figcaption {
+.gallery-wrap figure figcaption {
   background: $white;
   display: block;
   font-size: 14px;
@@ -62,7 +62,7 @@ figure figcaption {
 }
 
 /*** Push Up effect ****/
-figure img {
+.gallery-wrap figure img {
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -71,7 +71,7 @@ figure img {
   transition: all 0.5s;
 }
 
-figure figcaption {
+.gallery-wrap figure figcaption {
   opacity: 1;
   top: 100%;
   -moz-transform: translate3d(0, 0, 0);
@@ -79,7 +79,7 @@ figure figcaption {
   transform: translate3d(0, 0, 0);
 }
 
-figure:hover img {
+.gallery-wrap figure:hover img {
   -moz-transform: translate3d(
     0,
     -20px,
@@ -90,7 +90,7 @@ figure:hover img {
   opacity: 0.5;
 }
 
-figure:hover figcaption {
+.gallery-wrap figure:hover figcaption {
   box-shadow: 0px -2px 28px rgba(0, 0, 0, 0.3);
   -moz-transform: translate3d(
     0,

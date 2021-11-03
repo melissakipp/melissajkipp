@@ -15,7 +15,7 @@
     grid-column: 1 / span 2;
     & ul {
       align-content: center;
-      background: $bg-g; //#262262;
+      background: $bg-g;
       // display: block; // Once the menu gets bigger
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(91px, 1fr));
