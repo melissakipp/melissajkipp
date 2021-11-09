@@ -1,18 +1,8 @@
 language: ruby
-rvm:
-  - 2.2
-  - jruby
-
-services:
-  - docker
-
+before_script:
+  - rm -rf _site
 script:
   - bundle exec jekyll build
-
-after_success:
-  - docker build -t melissakipp/melissajkipp:1.0.0 .
-  - docker images melissakipp/melissajkipp
-
 branches:
   only:
     - main
