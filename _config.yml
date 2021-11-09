@@ -28,7 +28,8 @@ defaults:
       path: _pages
     values:
       is_post: false
-      layout: default
+      layout: page
+      permalink: page/
 
 # Pagination
 paginate: 6
@@ -49,6 +50,7 @@ sass:
 
 include:
   - _pages
+
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 exclude:
