@@ -187,32 +187,40 @@ label.radio-container {
 /* #################################################### */
 /* ################## Error & Success ################# */
 /* #################################################### */
-#errorBox {
-  height: 100px;
+input[aria-invalid="true"] {
+  background: #ffd5d5;
 }
 
-.contact label {
-  input {
-    border: 2px solid $success;
-  }
-  span.success-msg {
-    color: $success;
-    font-size: 1.15rem;
-    visibility: visible;
-  }
+.hint {
+  background: #c83737;
+  max-width: 80%;
+  padding: 0.25em;
+  color: #fff;
 }
-.contact-form__extra {
-  height: auto;
-  margin: 0.15rem 0 0.5rem 0;
-  span {
-    display: block;
-  }
-  span.error-msg {
-    border: 2px dashed $danger;
-    color: $danger;
-    padding: 0 0 0 0.15rem;
-    visibility: visible;
-  }
+
+[aria-invalid="true"] + .hint {
+  display: block;
+}
+
+div + label {
+  margin-top: 1em;
+}
+
+input,
+label {
+  display: block;
+}
+
+#errorMsg {
+  margin-top: 1em;
+}
+
+#errorMsg p {
+  margin-top: 0.5em;
+  background: #ffd5d5;
+  padding: 0.5em;
+  border: 2px solid #c83737;
+  margin: 0;
 }
 /* #################################################### */
 /* ################## Textarea Counter ################ */

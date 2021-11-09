@@ -4,17 +4,12 @@ title: Contact
 permalink: /contact
 ---
 
-<div id="errorBox" aria-live="polite"></div>
-
-<!-- Form        action="https://formsubmit.co/melissakipp.az@gmail.com"
-      method="POST"-->
+<!-- Form  -->
 <form
-  action="/"
-  method="GET"
+  action="https://formsubmit.co/melissakipp.az@gmail.com"
+  method="POST"
   id="contactForm"
   class="contact-form"
-  autocomplete="on"
-  aria-autocomplete="inline"
 >
   <header>
     <h3>Contact Form</h3>
@@ -29,43 +24,35 @@ permalink: /contact
     <label for="fullName"
       >Full Name: <small>&lpar;required&rpar;</small>
       <span class="successControl" aria-live="polite">&check;</span>
-      <input
-        type="text"
-        name="fullName"
-        id="fullName"
-        minlength="3"
-        autocomplete="name"
-        required
-        aria-required="true"
-      />
     </label>
+    <input
+      type="text"
+      name="fullName"
+      id="fullName"
+      required
+      aria-required="true"
+    />
     <div class="contact-form__extra">
       <span class="contact-form__example">
         <small>Example: John Doe</small>
       </span>
-      <!-- <span class="errorControl" aria-live="polite">
-            <small>Error Message</small>
-          </span> -->
     </div>
+    <div class="hint" id="fullNameHint" style="display: none">
+      Your name must be 3 or more characters.
+    </div>
+
     <label for="email"
       >Email: <small>&lpar;required&rpar;</small>
       <span class="success" aria-live="polite">&check;</span>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        autocomplete="email"
-        required
-        aria-required="true"
-      />
     </label>
+    <input type="text" name="email" id="email" required aria-required="true" />
     <div class="contact-form__extra">
       <span class="contact-form__example">
         <small>Example: johndoe@email.com</small>
       </span>
-      <!-- <span class="error" aria-live="polite">
-            <small>&#9940; Please check email address.</small>
-          </span> -->
+    </div>
+    <div class="hint" id="emailHint" style="display: none">
+      Please enter a correct email.
     </div>
   </fieldset>
   <fieldset class="project-type radio-btns">
@@ -124,7 +111,10 @@ permalink: /contact
         <label for="newsletter">I am a human.</label>
          </fieldset> -->
   <!-- above input was 'chekced' -->
-  <!-- Hidden Fields value="https://melissajkipp.com/thanks.html" -->
+
+  <div aria-live="assertive" id="errorMsg"></div>
+  <!-- Hidden Fields  -->
+  <!-- this is for production code in the _next input value="https://melissajkipp.com/thanks.html" -->
   <input
     type="hidden"
     name="_next"
@@ -165,3 +155,5 @@ permalink: /contact
     Send Request
   </button>
 </form>
+
+<script src="assets/js/contactForm.js"></script>

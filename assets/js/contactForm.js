@@ -1,141 +1,95 @@
 const contactForm = document.querySelector("#contactForm");
-const fullName = document.querySelector("#fullName");
-const email = document.querySelector("#email");
-const message = document.querySelector("#message");
-const errorElement = document.querySelector("#errorBox");
+const fullNameInput = document.querySelector("#fullName");
+const emailInput = document.querySelector("#email");
 
+// On the submit button's click event
 contactForm.addEventListener("submit", (e) => {
-  let errorInfo = [];
-  if (fullName.value === "" || fullName.value == null || fullName.value < 3) {
-    errorInfo.push("&#9940; Name is required. Must be 3 or more characters.");
-  }
+  // stop submission
+  e.preventDefault();
+  // reset
+  resetForm();
 
-  if (errorInfo.length > 0) {
-    e.preventDefault();
-    errorElement.innerText = errorInfo.join(", ");
-  }
+  // validation
+  validateForm();
 });
 
-// contactForm.addEventListener("submit", (e) => {
-//   checkInputs();
-//   e.preventDefault();
-// });
-// // &#9940; Please enter your name &lpar;min. of 3 characters&rpar;.
-// function checkInputs() {
-//   // get the values from the inputs
-//   const nameValue = fullName.value.trim();
-//   const emailValue = email.value.trim();
+function resetForm() {
+  const clearInputs = document.querySelector("input");
+  clearInputs.setAttribute("aria-invalid", "false");
+  clearInputs.setAttribute("aria-describedby", null);
 
-//   if (nameValue === "") {
-//     // show error
-//     // add error class
-//     setErrorFor(fullName, "&#9940; Name field cannot be blank.");
-//   } else {
-//     // add success class
-//     setSuccessFor(fullName);
-//   }
-// }
+  // clear live region
+  document.querySelector("#errorMsg").innerHTML === "";
 
-// function setErrorFor(errorControl, message) {
-//   const errorControl = contactForm.querySelector(".errorControl");
-//   console.log(errorControl);
-//   const small = errorControl.querySelector("small");
-//   // add error message inside small
-//   small.innerText = message;
-//   // add error class
-//   errorControl.className = "error-msg";
-// }
+  // hide all input hints for now
+  document.querySelectorAll(".hint").forEach((hint) => {
+    hint.style.display = "none";
+  });
+}
 
-// document.addEventListener("load", (e) => {
-//   // Get references to the form elements
-//   const contactForm = document.querySelector("#contactForm");
-//   const submitContact = document.querySelector("#submitContact");
-//   const message = document.querySelector("#message");
-//   document.querySelector("#email").addEventListener("keydown", blockspace);
-//   e.preventDefault();
-//   isNameValid();
-//   addDirtyListeners();
+// functions for checking form input values
+function invalidEmail(email) {
+  const regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return !regex.test(email);
+}
 
-//   let validitychecks = {
-//     "name": "Please enter your full name (minimum is 3 characters).",
-//     "email": "Please check email address.",
-//     "message": "Please give a short description for request.",
-//   };
+function invalidUsername(fullName) {
+  const regex = /^(?=.{3}).*[A-Za-z]/;
+  return !regex.test(fullName);
+}
 
-//   message.addEventListener("change", () => {
-//     let counter = document.querySelector("#count");
-//     let currentNum = message.value.length;
-//     counter.textContent = `${currentNum}`;
+function validateForm() {
+  // reset
+  let errors = false;
+  // collect input values
+  const emailValue = emailInput.value.trim();
+  const fullNameValue = fullNameInput.value.trim();
 
-//     if (currentNum <= 30) {
-//       counter.style.color = "#f03846";
-//     } else {
-//       counter.style.color = "#008a65";
-//     }
-//   });
+  // set attrs and error var if email invalid
+  if (invalidEmail(emailValue)) {
+    emailInput.setAttribute("aria-invalid", "true");
+    emailInput.setAttribute("aria-describedby", "emailHint");
 
-//   // Given a form field, run a custom check to see if the content is valid
-//   // and set the custom message if it is not
-//   function checkFieldValid(field) {
-//     // remove any old custom error message that was there before
-//     field.setCustomValidity("");
-//     let isvalid = field.checkValidity();
-//     if (!isvalid) field.setCustomValidity(validitychecks[field.id]);
-//   }
+    // show aria-describedby hint
+    document.querySelector("#emailHint").style = "";
 
-//   // Check the validity of each form element
-//   function runFieldChecks() {
-//     ["fullName", "email", "message"].forEach((elem) => {
-//       let field = document.getElementById(elem);
-//       checkFieldValid(field);
-//     });
-//   }
+    errors = true;
+  }
 
-//   // Check all the fields in the form when the user clicks Submit
-//   submitContact.addEventListener("click", (evt) => {
-//     if (theform.checkValidity() === false) {
-//       runFieldChecks();
-//     }
-//   });
+  // set attrs and error var if name invalid
+  if (invalidUsername(fullNameValue)) {
+    fullNameInput.setAttribute("aria-invalid", "true");
+    fullNameInput.setAttribute("aria-describedby", "fullNameHint");
 
-//   // set up change listeners to validate each element
-//   // when the value changes
-//   ["fullName", "email", "message"].forEach((elem) => {
-//     document.getElementById(elem).addEventListener("change", (evt) => {
-//       checkFieldValid(evt.srcElement);
-//     });
-//   });
-// });
+    // show aria-describedby hint
+    document.querySelector("#fullNameHint").style = "";
 
-// const name = document.querySelector("#fullName");
+    errors = true;
+  }
 
-// function isNameValid(name) {
-//   const pattern = "/^[A-Za-z][A-Za-z'-]+([ A-Za-z][A-Za-z'-]+)*/";
-//   if (preg_match(pattern, name)) {
-//     return true;
-//   }
-//   return false;
-// }
+  // if there are errors...
+  if (errors) {
+    // and populate live region
+    const errorBox = document.querySelector("#errorMsg");
+    errorBox.setAttribute("aria-invalid", "true");
+    errorBox.innerHTML =
+      "<p>Your form has errors. Please fix them and submit again.</p>";
+  }
+}
 
-// function addDirtyListeners() {
-//   contactForm = document.querySelector("#contactForm");
-//   let inputs = contactForm.getElementsByTagName("input");
-//   for (let i = 0; i < inputs.length; i++) {
-//     let input = inputs[i];
-//     input.addEventListener("input", dirtyInput);
-//     input.addEventListener("blur", dirtyInput);
-//   }
-// }
-
-// function dirtyInput(evt) {
-//   elem = evt.srcElement;
-//   if ((elem.nodeName = "INPUT")) {
-//     elem.classList.add("dirty");
-//   }
-// }
-
-// function blockspace(evt) {
-//   if (evt.key == " ") {
-//     evt.preventDefault();
-//   }
-// }
+// https://github.com/github/fetch
+fetch("https://formsubmit.co/ajax/your@email.com", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+  },
+  body: JSON.stringify({
+    name: "FormSubmit",
+    message: "I'm from Devro LABS",
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
