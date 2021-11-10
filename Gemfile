@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-gist', '~> 1.5'
 #   gem 'jekyll-include_snippet', '~> 0.2.0'
   gem 'jekyll-paginate', '~> 1.1'
+  gem 'rake', '~> 13.0', '>= 13.0.6'
   gem 'jekyll-redirect-from', '~> 0.16.0'
   gem 'jekyll-sass-converter', '~> 2.1'
   gem 'jekyll-seo-tag', '~> 2.7', '>= 2.7.1'
