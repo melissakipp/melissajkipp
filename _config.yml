@@ -8,49 +8,43 @@ twitter_path: https://twitter.com/lint_on_kipp
 github_path: https://github.com/melissakipp
 docker_path: https://hub.docker.com/u/melissakipp
 linkedin_path: https://www.linkedin.com/in/melissajkipp/
-
 # Build settings
+destination: public
 markdown: kramdown
 highlighter: rouge
-
-# permalink: none
-
-defaults:
-  - scope:
-      type: posts
-      path: _posts
-    values:
-      is_post: true
-      layout: post
-      permalink: blog/:categories/:title/
-  - scope:
-      type: pages
-      path: _pages
-    values:
-      is_post: false
-      layout: page
-      permalink: page/
-
+permalink: none
+# defaults:
+#   - scope:
+#     type: posts
+#     path: _posts
+#     values:
+#       is_post: true
+#       layout: post
+#       permalink: /blog/:categories/:title/
+#   - scope:
+#     type: pages
+#     path: _pages
+#     values:
+#       is_post: false
+#       layout: page
+#       permalink: /:page
 # Pagination
 paginate: 6
-paginate_path: "blog/page:num/"
-
+paginate_path: blog/page:num/
 plugins:
   - jekyll-feed
+  - jekyll-gist
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-gist
   - jekyll-sass-converter
-
 sass:
   sass_dir: _sass
   style: compressed
 
 include:
   - _pages
-
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 exclude:

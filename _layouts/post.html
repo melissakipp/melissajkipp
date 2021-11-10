@@ -13,11 +13,12 @@
       <h1 class="post-title">{{ page.title }}</h1>
       <hr />
       <section class="post-info">
+        <h2 class="visually-hidden">Article Information</h2>
         <ul>
-          <header class="visually-hidden">Article Information</header>
           <li>
             <span class="read-time" title="Estimated read time">
               <svg
+                aria-hidden="true"
                 id="i-clock"
                 viewBox="0 0 32 32"
                 width="17"
@@ -37,7 +38,7 @@
             </span>
           </li>
           <li>Author: {{ page.author }}</li>
-          <li>Date: {{ page.date | date: "%A, %b %d, %Y" }}</li>
+          <li>Date: {{ page.date | date: "%a %b %d, %Y" }}</li>
           <li>
             Tag: {% for category in page.categories %}
             <a href="/blog#{{ category }}/"> {{ category }} </a>

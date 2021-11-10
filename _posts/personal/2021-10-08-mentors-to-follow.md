@@ -4,10 +4,11 @@ title: "My Mentors List 2021"
 date: 2021-10-08 15:09:12 +0000
 categories: jekyll
 tags: Pinned
-author: Jekyll
-description: Mentors for web development students. A list of my top 5 mentors that have helped me. I have learned through a self-study style of learning how to code. These are they people that I have kept a close eye on.
+author: "Melissa Kipp"
+description: >
+  Mentors for web development students. A list of my top 5 mentors that have helped me. I have learned through a self-study style of learning how to code. These are they people that I have kept a close eye on.
 image: /assets/images/arizona-gallery-4.webp
-image-alt: "Desert flower"
+image_alt: "Desert flower"
 ---
 
 ![desert flower](/assets/images/arizona-gallery-4.webp){: .center-img}

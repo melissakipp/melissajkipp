@@ -4,14 +4,21 @@ title: "A Simple Jekyll Setup with Docker"
 date: 2021-10-04 15:09:12 +0000
 categories: jekyll
 tags: Pinned
-author: Melissa Kipp
-description: As I was starting my journey to learning to code, I was downloading and installing everything that was recommended. Once it was time for a new computer, I decided to be diligent on keeping it clean and clutter-free.
+author: "Melissa Kipp"
+description: >
+  As I was starting my journey to learning to code, I was downloading and installing everything that was recommended. Once it was time for a new computer, I decided to be diligent on keeping it clean and clutter-free.
 image: /assets/images/arizona-gallery-2.webp
-image-alt: "Desert flower"
+image_alt: "Desert flower"
 ---
 
 <figure>
-  <img class="center-img" src="/assets/images/arizona-gallery-2.webp" alt="" />
+  <img
+    class="center-img"
+    src="/assets/images/arizona-gallery-2.webp"
+    alt=""
+    role="presentation"
+    aria-hidden="true"
+  />
 </figure>
 
 <p>
@@ -84,16 +91,14 @@ image-alt: "Desert flower"
     </figure>
     <figure class="screenshot">
       <pre><code class="language-yaml">
-version: "2.7"
+ version: "2.7"
 
-services:
+ services:
   jekyll:
     image: bretfisher/jekyll-serve
-    volumes:
-      - .:/site
-    ports:
-      - "8080:4000"
-      </code></pre>
+    volumes: - .:/site
+    ports: - "8080:4000"
+</code></pre>
     </figure>
   </li>
   <li>

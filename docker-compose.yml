@@ -6,4 +6,5 @@ services:
     volumes:
       - .:/site
     ports:
-      - "8080:4000"
+      - "4000:4000"
+    command: bundle exec jekyll serve --force_polling -H 0.0.0.0 -P 4000 --trace

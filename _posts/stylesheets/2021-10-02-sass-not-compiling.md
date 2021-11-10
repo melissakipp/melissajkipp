@@ -5,9 +5,10 @@ date: 2021-10-02 15:09:12 +0000
 categories: stylesheets
 tags: Pinned
 author: Melissa Kipp
-description: These are some errors I came across when learning Sass. As a beginner, the current list of projects that I have used Sass in development are my personal portfolio site using Jekyll and NodeJS.
+description: >
+  These are some errors I came across when learning Sass. As a beginner, the current list of projects that I have used Sass in development are my personal portfolio site using Jekyll and NodeJS.
 image: /assets/images/arizona-gallery-5.webp
-image-alt: "Desert flower"
+image_alt: "Desert flower"
 ---
 
 ![desert flower](/assets/images/arizona-gallery-5.webp){: .center-img}
@@ -28,15 +29,15 @@ Leaving a property will cause the compiling to stop with or without an error.
 Error:
 Blank element
 
-![Blank Elements](/assets/images/1-error-a.png){:class="screenshot"}
-![Commenting out property](/assets/images/1-error-b.png){:class="screenshot"}
-![Empty property](/assets/images/1-error-c.png){:class="screenshot"}
+![Blank Elements](/assets/images/1-error-a.webp){:class="screenshot"}
+![Commenting out property](/assets/images/1-error-b.webp){:class="screenshot"}
+![Empty property](/assets/images/1-error-c.webp){:class="screenshot"}
 
 ### Solution:
 
 Comment the property entirely or delete.
 
-![Remove or comment out entire element](/assets/images/1-solution-a.png){:class="screenshot"}
+![Remove or comment out entire element](/assets/images/1-solution-a.webp){:class="screenshot"}
 
 ## Syntax Error
 
@@ -69,8 +70,8 @@ What I was trying to do is make a partial Sass with the header CSS (./sass/parti
 
 When you are importing a file into another you must have a '\_' (underscore) in front of the partial file.
 
-![Jekyll Sass File Stucture](/assets/images/3-solution-a.png){:class="screenshot"}
-![Importing into another file](/assets/images/3-solution-b.png){:class="screenshot"}
+![Jekyll Sass File Stucture](/assets/images/3-solution-a.webp){:class="screenshot"}
+![Importing into another file](/assets/images/3-solution-b.webp){:class="screenshot"}
 
 _Note: the file extension is not necessary._
 
@@ -78,8 +79,8 @@ _Note: the file extension is not necessary._
 
 `_base.scss` imported into `_header.scss files` (note: base and header files are in the same folder).
 
-![Imporing one file into another that are not in the same folder](/assets/images/3-solution-c.png){:class="screenshot"}
+![Imporing one file into another that are not in the same folder](/assets/images/3-solution-c.webp){:class="screenshot"}
 
 #### Conclusion:
 
-To be continue… This is not long list but I am sure there will be more issues that pop up.
+To be continue…
