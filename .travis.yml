@@ -5,17 +5,17 @@ before_script:
   - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
   - unzip awscliv2.zip
   - sudo rm -rf public
-  - sudo bundle exec jekyll build
+  - bundle exec jekyll build
 deploy:
   provider: s3
-  access_key_id: ${AWS_ACCESS_KEY_ID}
-  secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+  access_key_id: AWS_ACCESS_KEY_ID
+  secret_access_key: AWS_SECRET_ACCESS_KEY
   skip_cleanup: false
   acl: public_read
   local_dir: public
 script:
   #   - aws s3 sync public/ s3://melissajkipp.com --acl public-read --delete
-  - aws cloudfront create-invalidation --distribution-id d2pdjq01l8me6x.cloudfront.net --paths '/*'
+  - aws cloudfront create-invalidation --distribution-id CLOUDFRONT_DISTRIBUTION_ID.cloudfront.net --paths '/*'
 branches:
   only:
     - main
