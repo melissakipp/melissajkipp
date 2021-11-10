@@ -15,24 +15,24 @@ gem 'jekyll', '>= 3.9.0'
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-#  gem 'dpl-pages', '~> 1.10', '>= 1.10.16'
+#   gem 'dpl-pages', '~> 1.10', '>= 1.10.16'
 #   gem 'bcrypt', '~> 3.1', '>= 3.1.5'
 #   gem 'jekyll-compose', '~> 0.12.0'
   gem 'jekyll-feed', '~> 0.15.1'
   gem 'jekyll-gist', '~> 1.5'
 #   gem 'jekyll-include_snippet', '~> 0.2.0'
   gem 'jekyll-paginate', '~> 1.1'
-  #  gem 'octokit', '~> 4.21'
-  gem 'rake', '~> 13.0', '>= 13.0.6'
+#  gem 'octokit', '~> 4.21'
+#  gem 'rake', '~> 13.0', '>= 13.0.6'
   gem 'jekyll-redirect-from', '~> 0.16.0'
 #  gem 'rouge', '~> 3.26', '>= 3.26.1'
 #  gem 'rspec', '~> 3.10'
   gem 'jekyll-sass-converter', '~> 2.1'
   gem 'jekyll-seo-tag', '~> 2.7', '>= 2.7.1'
-  #  gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
+#  gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
   gem 'jekyll-sitemap', '~> 1.4'
   gem 'webrick', '~> 1.7'
-#   gem 'rubyzip', '~> 2.3', '>= 2.3.2'
+#  gem 'rubyzip', '~> 2.3', '>= 2.3.2'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
