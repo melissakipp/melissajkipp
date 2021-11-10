@@ -15,8 +15,7 @@ deploy:
   acl: public_read
   local_dir: public
 script:
-  #   - aws s3 sync public/ s3://melissajkipp.com --acl public-read --delete
-  - aws cloudfront create-invalidation --distribution-id CLOUDFRONT_DISTRIBUTION_ID.cloudfront.net --paths '/*'
+  - aws cloudfront create-invalidation --distribution-id CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
 branches:
   only:
     - main
