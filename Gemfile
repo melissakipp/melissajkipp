@@ -23,7 +23,7 @@ group :jekyll_plugins do
 #   gem 'jekyll-include_snippet', '~> 0.2.0'
   gem 'jekyll-paginate', '~> 1.1'
 #  gem 'octokit', '~> 4.21'
-#  gem 'rake', '~> 13.0', '>= 13.0.6'
+  gem 'rake', '~> 13.0', '>= 13.0.6'
   gem 'jekyll-redirect-from', '~> 0.16.0'
 #  gem 'rouge', '~> 3.26', '>= 3.26.1'
 #  gem 'rspec', '~> 3.10'
