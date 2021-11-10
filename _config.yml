@@ -63,3 +63,4 @@ exclude:
   - README.md
   - .dockerignore
   - .gitignore
+  - Rakefile

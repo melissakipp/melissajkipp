@@ -1,5 +1,7 @@
+require 'rake'
+require 'jekyll'
 task default: %w[test]
 
 task :test do
-  echo "Hello"
+  sh "ls"
 end
