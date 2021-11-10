@@ -3,7 +3,7 @@ before_script:
   - rm -rf _site
 script:
   - bundle update
-  - JEKYLL_ENV=production bundle exec jekyll build --trace
+  - bundle exec jekyll build
 branches:
   only:
     - main
