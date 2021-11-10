@@ -8,12 +8,15 @@ before_script:
   - sudo rm -rf public
   - bundle exec jekyll build
 deploy:
+  on:
+    branch: main
   provider: s3
   access_key_id: AWS_ACCESS_KEY_ID
   secret_access_key: AWS_SECRET_ACCESS_KEY
-  bucket: "melissajkipp.com"
-  skip_cleanup: false
+  bucket: melissajkipp.com
+  skip_cleanup: true
   acl: public_read
-  region: "us-west-2"
   upload-dir: public
-  all_branches: true
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
