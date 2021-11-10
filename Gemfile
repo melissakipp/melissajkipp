@@ -15,7 +15,7 @@ gem 'jekyll', '>= 3.9.0'
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-#   gem 'dpl-pages', '~> 1.10', '>= 1.10.16'
+#   gem 'aws-sdk-core', '~> 3.115'
 #   gem 'bcrypt', '~> 3.1', '>= 3.1.5'
 #   gem 'jekyll-compose', '~> 0.12.0'
   gem 'jekyll-feed', '~> 0.15.1'
