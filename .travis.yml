@@ -14,8 +14,6 @@ deploy:
   skip_cleanup: false
   acl: public_read
   local_dir: public
-script:
-  - aws cloudfront create-invalidation --distribution-id CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
 branches:
   only:
     - main
