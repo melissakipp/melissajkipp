@@ -1,5 +1,5 @@
 ---
-layout: simple
+layout: contactForm
 title: Contact
 permalink: /contact/
 ---
@@ -120,12 +120,15 @@ permalink: /contact/
   <input
     type="hidden"
     name="_next"
-    value="https://melissajkipp.com/thanks.html"
+    value="http://localhost:4000/thanks.html/"
   />
   <input type="hidden" name="_subject" value="New submission!" />
-  <input type="hidden" name="_cc" value="melissakipp.cs@gmail.com" />
   <input type="hidden" name="_captcha" value="true" />
-  <input type="hidden" name="_autoresponse" value="your custom message" />
+  <input
+    type="hidden"
+    name="_autoresponse"
+    value="From: Melissa Kipp - Thank You for contacting me. I will review your message and get back to you within 48 hours. Below you will see a copy of your message."
+  />
   <input type="hidden" name="_template" value="box" />
 
   <button
@@ -157,5 +160,3 @@ permalink: /contact/
     Send Request
   </button>
 </form>
-
-<script src="assets/js/contactForm.js"></script>

@@ -2,16 +2,19 @@ const contactForm = document.querySelector("#contactForm");
 const fullNameInput = document.querySelector("#fullName");
 const emailInput = document.querySelector("#email");
 
+contactForm.addEventListener("submit", sendForm);
+
 // On the submit button's click event
-contactForm.addEventListener("submit", (e) => {
+function sendForm(e) {
   // stop submission
   e.preventDefault();
   // reset
   resetForm();
-
   // validation
   validateForm();
-});
+
+  fetchFormData();
+}
 
 function resetForm() {
   const clearInputs = document.querySelector("input");
@@ -78,18 +81,19 @@ function validateForm() {
   }
 }
 
-// https://github.com/github/fetch
-fetch("https://formsubmit.co/ajax/your@email.com", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-  },
-  body: JSON.stringify({
-    name: "FormSubmit",
-    message: "I'm from Devro LABS",
-  }),
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
+function fetchFormData() {
+  fetch("https://formsubmit.co/ajax/melissakipp.az@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    },
+    body: JSON.stringify({
+      name: "FormSubmit",
+      message: "From",
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => data.sendForm)
+    .catch((error) => console.log(error));
+}

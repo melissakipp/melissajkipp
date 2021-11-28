@@ -3,11 +3,19 @@ layout: simple
 title: "Thank You"
 ---
 
-<div class="thanks-wrapper">
-  <hgroup class="thanks-title">
-    <h1 class="page-title">{{ page.title }}</h1>
-    <h2>Please check your email for confirmation.</h2>
-  </hgroup>
+<article class="thanks-wrapper">
+  <section>
+    <hgroup class="thanks-title">
+      <h1 class="page-title">{{ page.title }}!</h1>
+      <h2>Your message has been sent.</h2>
+    </hgroup>
+    <div>
+      <p>
+        Please check your email for confirmation<br />
+        and a copy of your message.
+      </p>
+    </div>
+  </section>
 
   <!-- Social Media -->
   <section class="social-thanks">
@@ -118,13 +126,7 @@ title: "Thank You"
   <section class="contact-info">
     <h3 class="visually-hidden">Copyright</h3>
     <article>
-      <!-- <h2>Contact Information</h2>
-      <ul>
-        <li>Phone: 123-456-7890</li>
-        <li>Email: info@mar.com</li>
-        <li>Address: 1234 Ocean Ave. Wavy, CA 12345</li>
-      </ul> -->
       <p class="copy">{{ site.title }} &copy; {{ site.time | date: '%Y' }}</p>
     </article>
   </section>
-</div>
+</article>
