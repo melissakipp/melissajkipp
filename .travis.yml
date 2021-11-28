@@ -1,11 +1,12 @@
 language: ruby
 sudo: true
+os: linux
 dist: trusty
 before_script:
   - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
   - unzip awscliv2.zip
-  - sudo ./aws/install
-  - sudo rm -rf public
+  - ./aws/install
+  - rm -rf public
   - bundle exec jekyll build
 deploy:
   on:
@@ -14,7 +15,6 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: melissajkipp.com
-  skip_cleanup: true
   acl: public_read
   region: us-west-2
   local_dir: public
