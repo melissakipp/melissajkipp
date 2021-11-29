@@ -1,5 +1,7 @@
 # Simple! Jekyll Development Enviorment
 
+[![Build Status](https://app.travis-ci.com/melissakipp/melissajkipp.svg?branch=main)](https://app.travis-ci.com/melissakipp/melissajkipp)
+
 <br>
 Resource: [Bret Fisher](https://github.com/BretFisher/jekyll-serve)
 
