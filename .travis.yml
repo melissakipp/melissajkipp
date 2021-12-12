@@ -20,7 +20,7 @@ deploy:
   region: us-west-2
   on:
     branch: main
-  local_dir: site/public
+  local_dir: ./public
 after_deploy:
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
