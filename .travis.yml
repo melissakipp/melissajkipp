@@ -8,7 +8,6 @@ before_script:
   - unzip awscliv2.zip
   - sudo chmod -R 777 /usr/local/aws-cli/
   - ./aws/install
-  - aws --version
   - rm -rf public
   - bundle exec jekyll build
 before_deploy: "echo 'Ready for deploy stage!!!'"
