@@ -1,7 +1,11 @@
 .thanks-wrapper {
   height: 100vh;
-  margin: 10% 0 10% 0;
+  margin: auto;
+  padding: 10% 0 10% 0;
   text-align: center;
+  section p {
+    margin: 1rem auto 0 auto;
+  }
   .social-thanks {
     display: flex;
     justify-content: center;
