@@ -1,5 +1,4 @@
 language: ruby
-sudo: true
 os: linux
 dist: trusty
 before_script:
@@ -8,17 +7,18 @@ before_script:
   - ./aws/install
   - rm -rf public
   - bundle exec jekyll build
-  - 'echo "Before script ended!!!!"'
+before_deploy: "echo 'Ready for deploy stage!!!'"
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: melissajkipp.com
-  acl: public_read
-  region: us-west-2
-  on:
-    branch: main
-  local_dir: /site/public
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: melissajkipp.com
+    acl: public_read
+    region: us-west-2
+    on:
+      branch: main
+    local_dir: site/public
 after_deploy:
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  - "echo 'Deploy Complete!!!'"
