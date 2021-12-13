@@ -3,3 +3,6 @@ public
 .jekyll-cache
 .jekyll-metadata
 vendor
+.bundle/
+aws/
+awscliv2.zip
