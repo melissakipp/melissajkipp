@@ -30,7 +30,6 @@
 }
 
 hr {
-  // color: $bg;
   background: $purple;
   height: 0.15rem;
   border-width: 0;
@@ -102,20 +101,20 @@ hr {
   grid-area: col4;
 }
 
-// .multi {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-areas: "col5 col6";
-//   gap: 1rem;
-// }
+.multi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "col5 col6";
+  gap: .25rem;
+}
 
-// .cert5 {
-//   grid-area: col5;
-// }
+.cert5 {
+  grid-area: col5;
+}
 
-// .cert6 {
-//   grid-area: col6;
-// }
+.cert6 {
+  grid-area: col6;
+}
 
 .tech-skills {
   padding: 0 0 0 2rem;
