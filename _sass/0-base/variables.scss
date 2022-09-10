@@ -54,11 +54,9 @@ $radius: 8px;
 
 $bg-light: hsla(217, 60%, 35%, 0.97); //changed
 $bg: hsla(286, 34%, 27%, 1);
-$bg-g: linear-gradient(
-  90deg,
-  hsla(286, 34%, 27%, 1) 0%,
-  hsla(217, 60%, 35%, 1) 100%
-);
+$bg-g: linear-gradient(90deg,
+    hsla(286, 34%, 27%, 1) 0%,
+    hsla(217, 60%, 35%, 1) 100%);
 
 /* three color
 background: hsla(286, 34%, 27%, 1);
@@ -136,6 +134,6 @@ $typescale: 18px;
   font-size: calc(2rem / var($typescale) / var($typescale));
 }
 
-@media screen and (min-width: 624px,) {
+@media screen and (min-width: 624px) {
   $typescale: 1.5em;
 }
