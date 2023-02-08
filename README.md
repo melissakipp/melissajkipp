@@ -1,4 +1,7 @@
-# Simple! Jekyll Development Enviorment
+# Testing the new banch and upstream to GitHub
+Redesign phase
+
+## Simple! Jekyll Development Enviorment
 
 [![Build Status](https://app.travis-ci.com/melissakipp/melissajkipp.svg?branch=main)](https://app.travis-ci.com/melissakipp/melissajkipp)
 
