@@ -1,123 +1,38 @@
-# Testing the new banch and upstream to GitHub
-Redesign phase
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Simple! Jekyll Development Enviorment
+## Getting Started
 
-[![Build Status](https://app.travis-ci.com/melissakipp/melissajkipp.svg?branch=main)](https://app.travis-ci.com/melissakipp/melissajkipp)
+First, run the development server:
 
-<br>
-Resource: [Bret Fisher](https://github.com/BretFisher/jekyll-serve)
-
-## Steps:
-
-1. Create your project folder.
-
-   ```sh
-   $ mkdir <project-name>
-   ```
-
-   ```sh
-   $ cd <project-name>
-   ```
-
-   <br>
-
-2. Run Docker command **NOTE** Be sure to **_ONLY_** run this in an empty folder.
-
-   ```sh
-   $ docker run --rm -v $(pwd):/site bretfisher/jekyll new .
-   ```
-
-   _ This install basic necessities to start a Jekyll site.
-   _ NOTE: `--rm` flag will remove this container once it is done installing the basic Jekyll files.
-   <br>
-
-3. Check: make sure you are still in the project folder
-
-   ```sh
-   $ pwd
-   ```
-
-   <br>
-
-4. Make a docker-compose file
-
-   ```sh
-   $ touch docker-compose.yml
-   ```
-
-   ```sh
-   $ vi docker-compose.yml
-   ```
-
-   _ <https://gist.github.com/melissakipp/33347071308a0c6e8daf78e7cf02e1a5>
-   _ **NOTE**: I add a container_name to may docker-compose.yml file
-   <br>
-
-5. Once the dev container is complete there is a permission issue[^1]
-
-   ```sh
-   $ sudo chmod -R 777 .
-   ```
-
-   <br>
-
-6. Start containter
-
-   ```sh
-   $ docker compose up
-   ```
-
-   \* **NOTE**: Adding `-d` flag so that it runs _detach_.
-   <br>
-
-7. Daily commands (make sure you are in the project folder):
-   ```sh
-   $ docker compose stop
-   ```
-   ```sh
-   $ docker compose start
-   ```
-   ```sh
-   $ docker compose restart
-   ```
-   \* Restart is mostly used when there are changes to the `_config.yml`
-
-### Project Completed
-
-Once the project is completed `$ docker compose down -v --rmi all`
-
-- `-v` flag will remove volumes.
-- `--rmi all` flag will remove all images for the project.
-
----
-
-#### Tip:
-
-`_config.yml`
-
-```
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - docker-compose
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-####TODO:
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-- [x] ~~Review Ruby~~
-- [x] ~~Learn about Jekyll development~~
-- [ ] Experiment with testing frameworks
-- [ ] Learn CI/CD processes
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-[^1]: ISSUE: Permissions are not correct for initial container build - I am not sure how to set permission without a Dockerfile.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
