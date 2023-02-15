@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.media__list {
+  list-style-type: none;
+}
+
+.media__item {
+  margin: 2rem;
+}
+
+.media__link {
+  border: 2px solid #222;
+  border-radius: 10px;
+  color: #222;
+  padding: .35rem;
+}
+
+.media__link:hover {
+  background-color: #222;
+  color: #f5f6fd;
+}
+
+@media screen and (width >= 43.75em) {
+  .media__item {
+    display: inline-block;
+  }
+}

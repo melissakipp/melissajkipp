@@ -1,0 +1,17 @@
+.container {
+  max-width: 65ch;
+}
+
+.container p:nth-child(2){
+  font-size: 1.5em;
+}
+.hello {
+  font-family: "rough-love", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  font-style: normal;
+}
+
+.name {
+  font-size: inherit;
+}

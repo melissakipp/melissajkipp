@@ -1,3 +1,105 @@
-*,*::after, *::before {
+* {
   box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
+
+html,
+body {
+  /* background-color: #f5f6fd; */
+  /* background-image: url("/static/mesh-purple-gradient.png"); */
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#141414;
+  /* 
+  font-family: "objektiv-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+  
+  DINosaur Book font-family: "dinosaur", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  DINosaur Book Italic font-family: "dinosaur", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  DINosaur Bold font-family: "dinosaur", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  DINosaur Bold Italic font-family: "dinosaur", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  
+  Base Mono Wide OT Reg font-family: "base-mono-wide", monospace;
+  font-weight: 400;
+  font-style: normal;
+  Base Mono Wide OT Bold font-family: "base-mono-wide", monospace;
+  font-weight: 700;
+  font-style: normal;
+
+  Rough Love Regular 
+  font-family: "rough-love", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  */
+  font-family: "objektiv-variable", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-variation-settings: "wght" 400;
+  line-height: 1.5;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+
+/* https: //gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+  /* 3 */
+}
+
+/*
+	Use in conjunction with .sr-only to only display content when it's focused.
+	@note Useful for skip links 
+	@see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+	@note Based on a HTML5 Boilerplate technique, included in Bootstrap
+	@note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+		@author Sylvain Pigeard
+		@see https://github.com/twbs/bootstrap/issues/20732
+*/
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+/* 
+Breakpoints:
+------------
+sm: min-width: 640px; // small device
+md: min-width: 768px; // medium device
+lg: min-width: 1024px; // large device
+xl: min-width: 1280px; // extra large device
+2xl: min-width: 1536px // 2x extra large device
+*/
