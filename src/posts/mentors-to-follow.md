@@ -7,11 +7,11 @@ tags: Pinned
 author: "Melissa Kipp"
 description: >
   Mentors for web development students. A list of my top 5 mentors that have helped me. I have learned through a self-study style of learning how to code. These are they people that I have kept a close eye on.
-image: /assets/images/arizona-gallery-4.webp
+image: /images/arizona-gallery-4.webp
 image_alt: "Desert flower"
 ---
 
-![desert flower](/assets/images/arizona-gallery-4.webp){: .center-img}
+![desert flower](/images/arizona-gallery-4.webp){: .center-img}
 
 The value of finding a mentor is a great foundation to shaping your own personal brand. Everyone needs a personal brand now a days. It is especially helpful to employer to get a sense of your character and personally. This helps manager see where you can fix within the team structure. While this is important, finding a online mentor to help guide you through personal life and career is underrated.
 

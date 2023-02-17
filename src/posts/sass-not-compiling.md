@@ -7,11 +7,11 @@ tags: Pinned
 author: Melissa Kipp
 description: >
   These are some errors I came across when learning Sass. As a beginner, the current list of projects that I have used Sass in development are my personal portfolio site using Jekyll and NodeJS.
-image: /assets/images/arizona-gallery-5.webp
+image: /images/arizona-gallery-5.webp
 image_alt: "Desert flower"
 ---
 
-![desert flower](/assets/images/arizona-gallery-5.webp){: .center-img}
+![desert flower](/images/arizona-gallery-5.webp){: .center-img}
 
 Being a newbie, there has been some head banging frustrations along the way, but with every obstacle there is always light at the end of the tunnel.
 
@@ -29,15 +29,15 @@ Leaving a property will cause the compiling to stop with or without an error.
 Error:
 Blank element
 
-![Blank Elements](/assets/images/1-error-a.webp){:class="screenshot"}
-![Commenting out property](/assets/images/1-error-b.webp){:class="screenshot"}
-![Empty property](/assets/images/1-error-c.webp){:class="screenshot"}
+![Blank Elements](/images/1-error-a.webp){:class="screenshot"}
+![Commenting out property](/images/1-error-b.webp){:class="screenshot"}
+![Empty property](/images/1-error-c.webp){:class="screenshot"}
 
 ### Solution:
 
 Comment the property entirely or delete.
 
-![Remove or comment out entire element](/assets/images/1-solution-a.webp){:class="screenshot"}
+![Remove or comment out entire element](/images/1-solution-a.webp){:class="screenshot"}
 
 ## Syntax Error
 
@@ -70,8 +70,8 @@ What I was trying to do is make a partial Sass with the header CSS (./sass/parti
 
 When you are importing a file into another you must have a '\_' (underscore) in front of the partial file.
 
-![Jekyll Sass File Stucture](/assets/images/3-solution-a.webp){:class="screenshot"}
-![Importing into another file](/assets/images/3-solution-b.webp){:class="screenshot"}
+![Jekyll Sass File Stucture](/images/3-solution-a.webp){:class="screenshot"}
+![Importing into another file](/images/3-solution-b.webp){:class="screenshot"}
 
 _Note: the file extension is not necessary._
 
@@ -79,7 +79,7 @@ _Note: the file extension is not necessary._
 
 `_base.scss` imported into `_header.scss files` (note: base and header files are in the same folder).
 
-![Imporing one file into another that are not in the same folder](/assets/images/3-solution-c.webp){:class="screenshot"}
+![Imporing one file into another that are not in the same folder](/images/3-solution-c.webp){:class="screenshot"}
 
 #### Conclusion:
 
