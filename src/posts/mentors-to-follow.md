@@ -7,7 +7,7 @@ tags: Pinned
 author: "Melissa Kipp"
 description: >
   Mentors for web development students. A list of my top 5 mentors that have helped me. I have learned through a self-study style of learning how to code. These are they people that I have kept a close eye on.
-image: /images/arizona-gallery-4.webp
+cover_image: /images/arizona-gallery-4.webp
 image_alt: "Desert flower"
 ---
 
