@@ -5,7 +5,7 @@ date: 2021-10-02 15:09:12 +0000
 categories: stylesheets
 tags: Pinned
 author: Melissa Kipp
-description: >
+excerpt: >
   These are some errors I came across when learning Sass. As a beginner, the current list of projects that I have used Sass in development are my personal portfolio site using Jekyll and NodeJS.
 cover_image: /images/arizona-gallery-5.webp
 image_alt: "Desert flower"

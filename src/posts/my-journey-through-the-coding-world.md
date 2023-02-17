@@ -5,7 +5,7 @@ date: 2021-10-01 15:09:12 +0000
 categories: personal
 tags: beginner
 author: "Melissa Kipp"
-description: >
+excerpt: >
   This career change started with wanting a space on the world wide web. As I researched on how to build a site, I found that all you need is HTML, CSS and some JavaScript. After taking a few online foundational courses, I developed my first website.
 cover_image: /images/arizona-gallery-3.webp
 image_alt: "Desert flower"

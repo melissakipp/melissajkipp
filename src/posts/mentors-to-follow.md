@@ -5,7 +5,7 @@ date: 2021-10-08 15:09:12 +0000
 categories: jekyll
 tags: Pinned
 author: "Melissa Kipp"
-description: >
+excerpt: >
   Mentors for web development students. A list of my top 5 mentors that have helped me. I have learned through a self-study style of learning how to code. These are they people that I have kept a close eye on.
 cover_image: /images/arizona-gallery-4.webp
 image_alt: "Desert flower"
