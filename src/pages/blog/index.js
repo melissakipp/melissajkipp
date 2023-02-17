@@ -3,25 +3,24 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+import Post from '@/components/Post';
+import styles from '@/styles/Blog.module.css';
+import { SortByDate } from '@/utils/SortByDate';
+
 const Blog = ({posts}) => {
   return (
-    <main>
-      <h2>Blog Post</h2>
+    <main className={styles.main}>
       <section>
-        <ul>
-          <li>
-            {posts.map((post, index) => (
-              <h3>{post.frontmatter.title}</h3>
-            ))}
+        <h2 className={styles.pageTitle}>Blog Post</h2>
+        <ul className={styles.postList}>
+          {posts.map((post, index) => (
+            <li key={posts.filename} className={styles.postList__item}>
+              <Post post={post} />
+            </li>
+          ))}
             
-          </li>
         </ul>
       </section>
-      {/* <div className='posts'>
-        {posts.map((post, index) => (
-          <Post key={index} post={post} />
-        ))}
-      </div> */}
     </main>
   );
 }
@@ -52,40 +51,9 @@ export async function getStaticProps() {
   
   return {
     props: {
-      posts,
+      posts: posts.sort(SortByDate),
     }
   }
 }
-
-
-// export async function getStaticProps() {
-//   // Get files from the posts dir src\pages\blog\posts\test.md
-//   const files = fs.readdirSync(path.join('posts'))
-
-//   // Get slug and frontmatter from posts
-//   const posts = files.map((filename) => {
-//     // Create slug
-//     const slug = filename.replace('.md', '')
-
-//     // Get frontmatter
-//     const markdownWithMeta = fs.readFileSync(
-//       path.join('posts', filename),
-//       'utf-8'
-//     )
-
-//     const { data: frontmatter } = matter(markdownWithMeta)
-
-//     return {
-//       slug,
-//       frontmatter,
-//     }
-//   })
-
-//   return {
-//     props: {
-//       posts: posts,
-//     },
-//   }
-// }
 
 export default Blog;

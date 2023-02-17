@@ -1,0 +1,19 @@
+.pageTitle {
+  font-size: 2.25rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.postList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.postList__item {
+  
+  max-width: 400px;
+}
+

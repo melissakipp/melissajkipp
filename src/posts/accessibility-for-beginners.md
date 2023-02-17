@@ -11,7 +11,7 @@ cover_image: /images/arizona-gallery-1.webp
 image_alt: "Desert flower"
 ---
 
-![desert flower](/images/arizona-gallery-1.webp){: .center-img}
+<!-- ![desert flower](/images/arizona-gallery-1.webp){: .center-img} -->
 
 ## Writing with Assistive Technology in Mind
 

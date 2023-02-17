@@ -1,0 +1,59 @@
+.main {
+  
+  display: flex;
+  justify-content: center;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 680));
+  margin: 2rem auto;
+}
+
+.container {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 10px;
+  padding: 4rem;
+  width: 75ch;
+}
+
+.imgContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: fit-content;
+}
+
+
+
+.btn {
+  display: inline-block;
+  background: #f8f8f8;
+  color: #222222;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  transform: scale(0.98);
+}
+
+.title {
+  font-size: 3rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.postDate {
+  margin: 2rem 0;
+}
