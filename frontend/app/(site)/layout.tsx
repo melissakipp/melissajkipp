@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '@/components/Header/Header';
 
 import '@/styles/globals.scss';
 import { Roboto_Flex, Roboto_Mono, Sansita_Swashed } from 'next/font/google';
@@ -42,7 +43,8 @@ export default function RootLayout({
       <body
         className={`${RobotoFlex.variable} ${RobotoMono.variable} ${SansitaSwashed.variable} font-sans`}
       >
-        {children}
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );
