@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import '@/styles/globals.scss';
 import { Roboto_Flex, Roboto_Mono, Sansita_Swashed } from 'next/font/google';
 
@@ -31,6 +33,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name='description' content={metadata.description} />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <body
         className={`${RobotoFlex.variable} ${RobotoMono.variable} ${SansitaSwashed.variable} font-sans`}
       >
