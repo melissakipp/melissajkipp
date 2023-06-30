@@ -4,7 +4,7 @@ import '@/styles/globals.scss';
 import { Roboto_Flex, Roboto_Mono, Sansita_Swashed } from 'next/font/google';
 
 export const metadata = {
-  title: 'Melissa J Kipp',
+  title: 'Melissa J Kipp ',
   description: 'Full Stack Engineer, DevOps (AWS), and Design Ops',
 };
 
