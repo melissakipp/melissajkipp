@@ -15,7 +15,7 @@ export default async function Projects() {
       </section>
       <section>
         {projects.map((project) => (
-          <div key={project.id}>{project.name}</div>
+          <div key={project._id}>{project.name}</div>
         ))}
       </section>
     </main>
