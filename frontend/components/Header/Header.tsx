@@ -18,8 +18,8 @@ export default async function Header() {
 
   return (
     <>
-      <header className='min-h-[14vh] bg-blue-200 w-full p-3 flex'>
-        <div className='flex justify-between max-w-screen-xl mx-auto w-full items-center'>
+      <header className='flex min-h-[14vh] w-full bg-blue-200 p-3'>
+        <div className='mx-auto flex w-full max-w-screen-xl items-center justify-between'>
           <figure>
             <svg
               width='100'
@@ -49,8 +49,8 @@ export default async function Header() {
               />
             </svg>
           </figure>
-          <nav className='text-xl max-w-full'>
-            <ul className='flex justify-between items-center p-5'>
+          <nav className='max-w-full text-xl'>
+            <ul className='flex items-center justify-between p-5'>
               <li className='mx-5'>
                 <Link className='hover:underline' href='/'>
                   Home

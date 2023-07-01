@@ -8,7 +8,7 @@ export default async function Dialog({ open }: { open: boolean }) {
   return (
     <>
       <dialog open={open} aria-modal='true'>
-        <div className='flex justify-between max-w-screen-xl mx-auto w-full items-center'>
+        <div className='mx-auto flex w-full max-w-screen-xl items-center justify-between'>
           <figure>
             <svg
               width='100'
@@ -38,8 +38,8 @@ export default async function Dialog({ open }: { open: boolean }) {
               />
             </svg>
           </figure>
-          <nav className='text-xl max-w-full'>
-            <ul className='flex justify-between items-center p-5'>
+          <nav className='max-w-full text-xl'>
+            <ul className='flex items-center justify-between p-5'>
               <li className='mx-5'>
                 <Link className='hover:underline' href='/'>
                   Home

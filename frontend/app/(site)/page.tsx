@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <article className='min-h-[72vh] lg:max-w-7xl m-auto p-5 flex flex-col justify-center items-center'>
+    <article className='m-auto flex min-h-[72vh] flex-col items-center justify-center p-5 lg:max-w-7xl'>
       <figure className='relative'>
         <Image
           src={WindowAz}
@@ -21,10 +21,10 @@ export default function Home() {
             maxWidth: '50vw',
             height: 'auto',
           }}
-          className='rounded-lg shadow-md my-10'
+          className='my-10 rounded-lg shadow-md'
         />
       </figure>
-      <h1 className='text-3xl lg:text-7xl font-extrabold border-b-4 p-2'>
+      <h1 className='border-b-4 p-2 text-3xl font-extrabold lg:text-7xl'>
         Melissa J Kipp
       </h1>
       <p className='my-3 text-xl text-gray-600'>Full Stack Developer</p>

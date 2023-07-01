@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className='text-center min-h-[14vh] bg-blue-200 w-full p-3 flex items-center'>
-      <article className='grid-rows-2 max-w-screen-xl mx-auto w-full'>
+    <footer className='flex min-h-[14vh] w-full items-center bg-blue-200 p-3 text-center'>
+      <article className='mx-auto w-full max-w-screen-xl grid-rows-2'>
         <section>Social Media Links</section>
         <section>
           <h4>
