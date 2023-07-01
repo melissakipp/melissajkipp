@@ -46,7 +46,7 @@ export default async function Project({ params }: Props) {
             </figure>
           </section>
           <section className='my-10 flex justify-center'>
-            <div style={{ maxWidth: 70 + 'ch' }}>
+            <div className='max-w-prose'>
               <PortableText value={project.content} />
             </div>
           </section>
