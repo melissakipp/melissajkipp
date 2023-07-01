@@ -1,21 +1,8 @@
 import { Project } from '@/types/Project';
-import { createClient, groq } from 'next-sanity';
+import { createClient } from '@sanity/client';
+import { groq } from 'next-sanity';
 import clientConfig from './config/client-config';
 import { Page } from '@/types/Page';
-
-// export async function getProjects(): Promise<Project[]> {
-//   return createClient(clientConfig, { previewKit: true }).fetch(
-//     groq`*[_type == "project"]{
-//       _id,
-//       _createdAt,
-//       name,
-//       "slug": slug.current,
-//       "image": image.asset->url,
-//       url,
-//       content,
-//     }`
-//   );
-// }
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
