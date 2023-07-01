@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '@/components/Header/Header';
-
+import Footer from '@/components/Footer/Footer';
 import '@/styles/globals.scss';
 import { Roboto_Flex, Roboto_Mono, Sansita_Swashed } from 'next/font/google';
 
@@ -45,6 +45,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
