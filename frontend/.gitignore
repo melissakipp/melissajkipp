@@ -35,4 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Tailwind CSS
-tailwind-full.config.js
+tailwind-full.*.js
