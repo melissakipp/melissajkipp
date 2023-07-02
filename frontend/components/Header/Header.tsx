@@ -18,7 +18,7 @@ export default async function Header() {
 
   return (
     <>
-      <header className='flex min-h-[14vh] w-full bg-blue-200 p-3'>
+      <header className='flex min-h-[14vh] w-full bg-purple-200 p-3'>
         <div className='mx-auto flex w-full max-w-screen-xl items-center justify-between'>
           <figure>
             <svg
