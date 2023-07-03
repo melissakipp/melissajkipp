@@ -8,24 +8,24 @@ import {
 
 export default function Footer() {
   return (
-    <footer className='flex min-h-[8vh] w-full items-center bg-purple-200  p-[3vh] text-center'>
+    <footer className='flex min-h-[8vh] w-full items-center bg-purple-200 p-[3vh]  text-center'>
       <article className='mx-auto w-full max-w-screen-xl grid-rows-2'>
         <section>
           <h4 className='sr-only'>Social Media Links</h4>
-          <ul className='row-auto mb-3 flex justify-center text-3xl'>
-            <li className='mx-5'>
+          <ul className='row-auto mb-3 flex justify-center space-x-10 text-3xl '>
+            <li>
               <span className='sr-only'>Email</span>
               <a href='mailto:melissakipp.az@gmail.com' target='_blank'>
                 <BiEnvelope aria-hidden='true' />
               </a>
             </li>
-            <li className='mx-5'>
+            <li>
               <span className='sr-only'>GitHub</span>
               <a href='https://github.com/melissakipp' target='_blank'>
                 <BiLogoGithub aria-hidden='true' />
               </a>
             </li>
-            <li className='mx-5'>
+            <li>
               <span className='sr-only'>LinkedIn</span>
               <a
                 href='https://www.linkedin.com/in/melissajkipp/'
@@ -34,13 +34,13 @@ export default function Footer() {
                 <BiLogoLinkedinSquare aria-hidden='true' />
               </a>
             </li>
-            <li className='mx-5'>
+            <li>
               <span className='sr-only'>Behance</span>
               <a href='https://www.behance.net/melissajkipp' target='_blank'>
                 <BiLogoBehance aria-hidden='true' />
               </a>
             </li>
-            <li className='mx-5'>
+            <li>
               <span className='sr-only'>Resume</span>
               <a href='' target='_blank'>
                 <BiFile aria-hidden='true' />
