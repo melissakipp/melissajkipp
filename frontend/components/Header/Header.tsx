@@ -18,12 +18,12 @@ export default async function Header() {
 
   return (
     <>
-      <header className='flex min-h-[14vh] w-full bg-purple-200 p-3'>
+      <header className='flex min-h-[10vh] w-full bg-purple-200 p-3'>
         <div className='mx-auto flex w-full max-w-screen-xl items-center justify-between'>
-          <figure>
+          <figure className='border-red-500'>
             <svg
-              width='100'
-              height='100'
+              width='80'
+              height='80'
               version='1.1'
               id='Layer_1'
               xmlns='http://www.w3.org/2000/svg'
