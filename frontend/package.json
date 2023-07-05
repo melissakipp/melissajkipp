@@ -42,7 +42,7 @@
     "tailwindcss": "^3.3.2"
   },
   "prettier": {
-    "semi": false,
+    "semi": true,
     "printWidth": 100,
     "bracketSpacing": false,
     "singleQuote": true
