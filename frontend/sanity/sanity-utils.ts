@@ -1,11 +1,15 @@
-import { Project } from '@/types/Project';
-import { createClient } from '@sanity/client';
-import { groq } from 'next-sanity';
+import {Project} from '@/types/Project';
+import {createClient} from '@sanity/client';
+import {groq} from 'next-sanity';
 import clientConfig from './config/client-config';
-import { Page } from '@/types/Page';
+import {Page} from '@/types/Page';
+import {cache} from 'react';
+
+// Wrap the cache function in a way that reuses the TypeScript definitions
+const clientFetch = cache(createClient(clientConfig).fetch.bind(createClient(clientConfig)));
 
 export async function getProjects(): Promise<Project[]> {
-  return createClient(clientConfig).fetch(
+  return clientFetch(
     groq`*[_type == "project"]{
       _id,
       _createdAt,
@@ -19,7 +23,7 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getProject(slug: string): Promise<Project> {
-  return createClient(clientConfig).fetch(
+  return clientFetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
@@ -29,12 +33,12 @@ export async function getProject(slug: string): Promise<Project> {
       url,
       content
     }`,
-    { slug }
+    {slug}
   );
 }
 
 export async function getPages(): Promise<Page[]> {
-  return createClient(clientConfig).fetch(
+  return clientFetch(
     groq`*[_type == "page"]{
       _id,
       _createdAt,
@@ -45,7 +49,7 @@ export async function getPages(): Promise<Page[]> {
 }
 
 export async function getPage(slug: string): Promise<Page> {
-  return createClient(clientConfig).fetch(
+  return clientFetch(
     groq`*[_type == "page" && slug.current == $slug][0]{
       _id,
       _createdAt,
@@ -53,6 +57,6 @@ export async function getPage(slug: string): Promise<Page> {
       "slug": slug.current,
       content
     }`,
-    { slug }
+    {slug}
   );
 }
