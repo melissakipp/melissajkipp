@@ -33,9 +33,11 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "sanity": "^3.14.1",
+    "styled-components": "^5.3.9",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "sass": "^1.62.1",
