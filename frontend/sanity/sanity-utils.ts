@@ -1,16 +1,15 @@
-import {Project} from '@/types/Project';
-import {createClient} from '@sanity/client';
-import {groq} from 'next-sanity';
-import clientConfig from './config/client-config';
-import {Page} from '@/types/Page';
-import {cache} from 'react';
+import { Project } from '@/types/Project';
+import { groq } from 'next-sanity';
+import { clientConfig } from './config/client-config';
+import { Page } from '@/types/Page';
+import { cache } from 'react';
 
 // Wrap the cache function in a way that reuses the TypeScript definitions
-const clientFetch = cache(createClient(clientConfig).fetch.bind(createClient(clientConfig)));
+const clientFetch = cache(clientConfig.fetch.bind(clientConfig));
 
 export async function getProjects(): Promise<Project[]> {
   return clientFetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"]{s
       _id,
       _createdAt,
       name,
@@ -33,7 +32,7 @@ export async function getProject(slug: string): Promise<Project> {
       url,
       content
     }`,
-    {slug}
+    { slug }
   );
 }
 
@@ -57,6 +56,6 @@ export async function getPage(slug: string): Promise<Page> {
       "slug": slug.current,
       content
     }`,
-    {slug}
+    { slug }
   );
 }
