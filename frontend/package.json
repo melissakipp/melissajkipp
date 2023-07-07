@@ -45,7 +45,6 @@
   "prettier": {
     "semi": true,
     "printWidth": 100,
-    "bracketSpacing": false,
     "singleQuote": true
   }
 }
