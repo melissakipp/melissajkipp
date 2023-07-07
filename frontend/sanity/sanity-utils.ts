@@ -3,6 +3,7 @@ import { clientConfig } from './config/client-config';
 
 import { Project } from '@/types/Project';
 import { Page } from '@/types/Page';
+import { Post } from '@/types/Post';
 
 import { cache } from 'react';
 
@@ -61,3 +62,20 @@ export async function getPage(slug: string): Promise<Page> {
     { slug }
   );
 }
+
+export async function getPosts(): Promise<Post[]> {
+  return clientFetch(
+    groq`*[_type=='post'] {
+    ...,
+    author->,
+    categories[]->
+    } | order(_createdAt desc)`
+  );
+}
+
+// *[_type == "post"]{
+//       _id,
+//       _createdAt,
+//       title,
+//       "slug": slug.current,
+//     }
