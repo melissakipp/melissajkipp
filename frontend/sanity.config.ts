@@ -10,7 +10,9 @@ import { deskTool } from 'sanity/desk';
 import { apiVersion, dataset, projectId } from './sanity/env';
 import { schema } from './sanity/schemas/index';
 import { theme } from './theme';
+
 import StudioNavbar from './components/Studio/StudioNavbar';
+import Logo from './components/Studio/Logo';
 
 const config = defineConfig({
   projectId,
@@ -28,7 +30,7 @@ const config = defineConfig({
   ],
   studio: {
     components: {
-      // logo: Logo,
+      logo: Logo,
       navbar: StudioNavbar,
     },
   },
