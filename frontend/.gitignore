@@ -34,6 +34,7 @@ env*
 
 # typescript
 *.tsbuildinfo
-next-env.d.tss
+next-env.d.ts
+
 # Tailwind CSS
 tailwind-full.*.js
