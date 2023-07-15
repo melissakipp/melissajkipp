@@ -19,7 +19,6 @@ const config = defineConfig({
   dataset,
   name: 'portfolio',
   title: 'Portfolio',
-
   basePath: '/admin',
   schema,
   plugins: [

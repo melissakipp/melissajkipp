@@ -130,7 +130,7 @@ export default function Header() {
                 />
               </svg>
             </span>
-            <Link href="/posts" className="text-lg font-semibold leading-6">
+            <Link href="/blog" className="text-lg font-semibold leading-6">
               Blog
             </Link>
           </li>
@@ -223,7 +223,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/posts"
+                    href="/blog"
                     className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
                   >
                     <span className="flex">

@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const metadata = {
-  title: 'Melissa J Kipp | Blog Article',
+  title: 'Melissa J Kipp | Projects',
   description: 'Full Stack Engineer, DevOps (AWS), and Design Ops',
 };
 
@@ -20,33 +20,33 @@ export default async function Project({ params }: Props) {
 
   return (
     <>
-      <div className='max-w-5xl mx-auto p-5'>
-        <article className='my-10 text-xl mx-auto py-10'>
-          <header className=''>
-            <h1 className='text-5xl font-bold text-center'>{project.name}</h1>
+      <div className="max-w-5xl mx-auto p-5">
+        <article className="my-10 text-xl mx-auto py-10">
+          <header className="">
+            <h1 className="text-5xl font-bold text-center">{project.name}</h1>
             <a
               href={project.url}
-              title='View Project'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='block text-left bg-gray-200 p-3 my-10 round-lg whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition'
+              title="View Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-left bg-gray-200 p-3 my-10 round-lg whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition"
             >
               View Project
             </a>
           </header>
-          <section className='flex justify-center'>
-            <figure className='my-10'>
+          <section className="flex justify-center">
+            <figure className="my-10">
               <Image
                 src={project.image}
                 alt={project.name}
                 width={600}
                 height={400}
-                className='object-cover rounded-lg'
+                className="object-cover rounded-lg"
               />
             </figure>
           </section>
-          <section className='my-10 flex justify-center'>
-            <div className='max-w-prose'>
+          <section className="my-10 flex justify-center">
+            <div className="max-w-prose">
               <PortableText value={project.content} />
             </div>
           </section>
