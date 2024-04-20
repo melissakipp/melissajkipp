@@ -6,3 +6,6 @@ vendor
 .bundle/
 aws/
 awscliv2.zip
+node_modules
+next-env.d.ts
+.next
