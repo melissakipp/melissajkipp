@@ -1,9 +1,10 @@
-import styles from "./page.module.css";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <article className="h-[100vh]">
       <h1>Populate me with Sanity Content</h1>
-    </main>
+    </article>
   );
 }
