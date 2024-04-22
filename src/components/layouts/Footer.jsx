@@ -41,15 +41,19 @@ import {
                 </a>
               </li>
               <li>
-                <span className='sr-only'>Resume</span>
-                <a href='' target='_blank'>
+                <span className='sr-only'>Click to download pdf Resume in a new window</span>
+                <a 
+                  href='/Melissa_J_Kipp_Frontend-UX-UI_Resume.pdf'
+                  rel='noopener noreferrer'
+                  target="_blank"
+                >
                   <BiFile aria-hidden='true' />
                 </a>
               </li>
             </ul>
           </section>
           <section className=''>
-            <h4 className='sr-only'>Disclaimer</h4>
+            <h4 className='sr-only'>Disclaimer - Copyrights</h4>
             <a
               className='hover:underline'
               href='https://www.linkedin.com/in/melissajkipp/'

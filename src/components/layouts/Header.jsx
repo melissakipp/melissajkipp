@@ -73,7 +73,7 @@ export default function Header() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="h-6 w-6"
               >
@@ -85,10 +85,26 @@ export default function Header() {
               </svg>
             </span>
             <Link href="#" className="text-lg font-semibold leading-6">
-              <span className="sr-only">Home</span>
               Home
             </Link>
           </li>
+          <li className="mt-2 flex items-center">
+          <span className="mr-1.5 h-6 w-6 flex-shrink-0" aria-hidden="true">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path 
+                d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/>
+            </svg>
+          </span>
+          <Link href="/about" className="text-lg font-semibold leading-6">
+            About
+          </Link>
+        </li>
           {/* <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
             Projects
           </a> */}
@@ -175,12 +191,11 @@ export default function Header() {
                     className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
                   >
                     <span className="flex">
-                      {' '}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        strokeWidth={1.5}
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="mr-2 h-6 w-6"
                         aria-hidden="true"
@@ -196,7 +211,24 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  {' '}
+                <Link href="/about" className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100">
+                <span className="flex">
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                    strokeWidth="1"
+                    stroke="currentColor"
+                    className="mr-2 h-6 w-6"
+                    aria-hidden="true"
+                  >
+                    <path 
+                      d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/>
+                  </svg>
+                  About
+                  </span>
+                </Link>
+              </li>
+                <li>
                   <Link
                     href="/contact"
                     className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
