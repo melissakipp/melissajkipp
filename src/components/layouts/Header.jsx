@@ -87,7 +87,7 @@ export default function Header() {
                 />
               </svg>
             </span>
-            <Link href="#" className="text-lg font-semibold leading-6">
+            <Link href="/" className="text-lg font-semibold leading-6">
               Home
             </Link>
           </li>
