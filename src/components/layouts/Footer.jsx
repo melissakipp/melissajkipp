@@ -8,7 +8,7 @@ import {
   
   export default function Footer() {
     return (
-      <footer className='flex min-h-[8vh] w-full items-center bg-purple-200 p-[3vh]  text-center'>
+      <footer className='flex min-h-[8vh] w-full items-center bg-purple-500 p-[3vh] text-purple-50 text-center'>
         <article className='mx-auto w-full max-w-screen-xl grid-rows-2'>
           <section>
             <h4 className='sr-only'>Social Media Links</h4>
