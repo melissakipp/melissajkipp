@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className='bg-purple-700 text-purple-50 drop-shadow-md'>
       <nav
-        className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'
+        className='mx-auto px-6 py-0 flex max-w-7xl items-center justify-between'
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>
@@ -136,11 +136,11 @@ export default function Header() {
       </nav>
       <Dialog as='div' className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className='fixed inset-0 z-10' />
-        <DialogPanel className='p-6 bg-purple-50 rounded-b-2xl fixed inset-y-0 right-0 z-10 w-full h-[50vh] overflow-y-auto bg-white drop-shadow-md sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+        <DialogPanel className='p-3 bg-purple-50 rounded-b-2xl fixed inset-y-0 right-0 z-10 w-full h-[50vh] overflow-y-auto bg-white drop-shadow-md sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
             <DialogTitle>
             <span className='sr-only'>Main menu</span>
-            <Link href='/' className='-m-1.5 p-1.5'>
+            <Link href='/'>
               <span className='sr-only'>Melissa J Kipp's logo back to the home page link</span>
               <svg
                 width='80'
