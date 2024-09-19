@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Dialog } from '@headlessui/react';
+import { Dialog , DialogPanel, DialogTitle } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 // import { getPages } from '@/sanity/sanity-utils';
@@ -21,8 +21,9 @@ export default function Header() {
       >
         <div className='flex lg:flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
-            <span className='sr-only'>Melissa J Kipp Logo</span>
+            <span className='sr-only'>Melissa J Kipp's logo back to the home page link</span>
             <svg
+              aria-hidden='true'
               width='80'
               height='80'
               version='1.1'
@@ -71,9 +72,27 @@ export default function Header() {
             </li>
           ))} */}
           <li className='mt-2 flex items-center'>
-            <Link href='/' className='flex-shrink-0'>
-              <span className='mr-1.5 h-6 w-6' aria-hidden='true'>
+          <Link href='/about' className='flex items-center'>
+            <span className='h-6 w-6' aria-hidden='true'>
+              <svg
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 576 512'
+                className='h-6 w-6'
+                fill='currentColor'
+              >
+                <path 
+                  d='M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z'/>
+              </svg>
+            </span>
+            <span className='ml-2 text-lg font-semibold leading-6'>About</span>
+          </Link>
+        </li>
+          <li className='mt-2 flex items-center'>
+            <Link href='/contact' className='flex items-center'>
+              <span className='h-6 w-6' aria-hidden='true'>
                 <svg
+                  aria-hidden='true'
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
                   viewBox='0 0 24 24'
@@ -84,82 +103,45 @@ export default function Header() {
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
-                    d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'
+                    d='M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z'
                   />
                 </svg>
               </span>
-                <span className='text-lg font-semibold leading-6'>Home</span>
+              <span className='ml-2 text-lg font-semibold leading-6'>Contact</span>
             </Link>
           </li>
           <li className='mt-2 flex items-center'>
-          <span className='mr-1.5 h-6 w-6 flex-shrink-0' aria-hidden='true'>
-            <svg 
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 576 512'
-              className='h-6 w-6'
-              fill='currentColor'
-            >
-              <path 
-                d='M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z'/>
-            </svg>
-          </span>
-          <Link href='/about' className='text-lg font-semibold leading-6'>
-            About
-          </Link>
-        </li>
-          {/* <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Projects
-          </a> */}
-          <li className='mt-2 flex items-center'>
-            <span className='mr-1.5 h-6 w-6 flex-shrink-0' aria-hidden='true'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth='2'
-                stroke='currentColor'
-                className='h-6 w-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z'
-                />
-              </svg>
-            </span>
-            <Link href='/contact' className='text-lg font-semibold leading-6'>
-              Contact
-            </Link>
-          </li>
-          <li className='mt-2 flex items-center'>
-            <span className='mr-1.5 h-6 w-6 flex-shrink-0' aria-hidden='true'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth='2'
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
-                />
-              </svg>
-            </span>
-            <Link href='/blog' className='text-lg font-semibold leading-6'>
-              Blog
+            <Link href='/blog' className='flex items-center'>
+              <span className='h-6 w-6' aria-hidden='true'>
+                <svg
+                  aria-hidden='true'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth='2'
+                  stroke='currentColor'
+                  className='w-6 h-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
+                  />
+                </svg>
+              </span>
+              <span className='ml-2 text-lg font-semibold leading-6'>Blog</span>
             </Link>
           </li>
         </ul>
       </nav>
       <Dialog as='div' className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className='fixed inset-0 z-10' />
-        <Dialog.Panel className='p-6 bg-purple-50 fixed inset-y-0 right-0 z-10 w-full h-[50vh] overflow-y-auto bg-white drop-shadow-md sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+        <DialogPanel className='p-6 bg-purple-50 rounded-b-2xl fixed inset-y-0 right-0 z-10 w-full h-[50vh] overflow-y-auto bg-white drop-shadow-md sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
+            <DialogTitle>
+            <span className='sr-only'>Main menu</span>
             <Link href='/' className='-m-1.5 p-1.5'>
-              <span className='sr-only'>Melissa J Kipp</span>
+              <span className='sr-only'>Melissa J Kipp's logo back to the home page link</span>
               <svg
                 width='80'
                 height='80'
@@ -177,6 +159,7 @@ export default function Header() {
                 <path d='M413.3 172.5c-1.1 0-2.3 0-3.7-.1-1.4-.1-3-.2-4.6-.3l-1.7-.1v-9l2.1.4c.3.1 1 .2 3.1.2 1.7.1 3.3.1 4.9.1 6 0 10.5-1.3 13.2-3.8 2.7-2.5 4.1-6.4 4.1-11.7 0-3.8-.5-8.2-1.5-13-1-5-2.1-9.9-3.1-15-1.1-5.1-1.6-9.7-1.6-13.7 0-7.1 1.9-12.7 5.8-16.6 1.5-1.5 3.3-2.8 5.4-3.7-2-1-3.8-2.2-5.3-3.7-3.9-3.9-5.9-9.4-5.9-16.4 0-4.1.5-8.7 1.6-13.8 1-5 2.1-10 3.1-15 1-4.8 1.5-9.1 1.5-12.7 0-5.5-1.4-9.5-4-12-2.7-2.4-7.2-3.6-13.2-3.6h-5c-2.1 0-2.9.1-3.1.1l-2.1.4v-9l1.7-.1c1.6-.1 3.2-.2 4.6-.3 1.4-.1 2.6-.1 3.7-.1 9.2 0 16 2 20.4 6.1 4.4 4.1 6.6 10.3 6.6 18.6 0 4.3-.5 9-1.5 14-1 4.9-2.1 9.8-3.2 14.6-1.1 4.7-1.6 9.2-1.6 13.3 0 5.1 1.4 8.9 4.1 11.2 2.8 2.4 7.2 3.6 13.2 3.6h6v9.7h-6c-5.9 0-10.4 1.2-13.2 3.6-2.7 2.3-4.1 6.1-4.1 11.2 0 4.2.5 8.7 1.6 13.3 1.1 4.8 2.2 9.7 3.2 14.6s1.5 9.7 1.5 14.1c0 8.3-2.2 14.5-6.6 18.5-4.4 4.1-11.3 6.1-20.4 6.1zm-6.5-3.8c1 .1 1.9.1 2.8.2 1.4.1 2.6.1 3.6.1 8.2 0 14.3-1.7 17.9-5 3.6-3.3 5.5-8.7 5.5-15.9 0-4.2-.5-8.7-1.5-13.4-1-4.8-2-9.7-3.1-14.5-1.1-4.9-1.7-9.7-1.7-14.1 0-6.2 1.8-10.9 5.3-13.9 2-1.7 4.5-2.9 7.6-3.6-.7-.1-1.4-.2-2-.3-3.6.8-6.5 2.2-8.6 4.4-3.1 3.2-4.7 7.9-4.7 14.1 0 3.7.5 8.1 1.5 12.9 1 5 2.1 10 3.1 15 1.1 5.1 1.6 9.7 1.6 13.7 0 6.3-1.8 11.1-5.2 14.3-3.4 3.2-8.7 4.8-15.6 4.8-1.6 0-3.3 0-5-.1-.6 0-1.1 0-1.6-.1v1.4zm42-83.7v2.7c.8 0 1.6-.1 2.4-.1h2.4V85h-2.4c-.8.1-1.6 0-2.4 0zM408.5 5.4h5c7 0 12.2 1.6 15.6 4.7 3.5 3.1 5.2 8.1 5.2 14.6 0 3.8-.5 8.3-1.6 13.4-1 5-2.1 9.9-3.1 15-1 4.9-1.5 9.3-1.5 13.1 0 6 1.6 10.7 4.8 13.9 2.2 2.2 5 3.6 8.6 4.5l1.8-.3c-3-.7-5.5-1.9-7.5-3.6-3.5-3-5.3-7.7-5.3-13.9 0-4.4.6-9.2 1.7-14.1 1.1-4.8 2.1-9.7 3.1-14.6 1-4.8 1.5-9.2 1.5-13.3 0-7.3-1.8-12.6-5.5-16-3.7-3.4-9.7-5.1-17.9-5.1-1 0-2.2 0-3.6.1-.9 0-1.8.1-2.8.1v1.6c.3-.1.8-.1 1.5-.1z'/>
               </svg>
             </Link>
+            </DialogTitle>
             <button
               type='button'
               className='-m-2.5 rounded-md p-2.5 text-gray-700'
@@ -190,46 +173,21 @@ export default function Header() {
             <nav className='-my-6 divide-y divide-gray-500/10'>
               <ul className='space-y-2 py-6'>
                 <li>
-                  <Link
-                    href='/'
-                    className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100'
-                  >
+                  <Link href='/about' className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100'>
                     <span className='flex'>
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        strokeWidth='2'
-                        stroke='currentColor'
-                        className='mr-2 h-6 w-6'
                         aria-hidden='true'
+                        xmlns='http://www.w3.org/2000/svg'
+                        viewBox='0 0 576 512'
+                        className='mr-2 h-6 w-6'
                       >
-                        <path
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'
-                        />
+                        <path 
+                          d='M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z'/>
                       </svg>
-                      Home
+                      About
                     </span>
                   </Link>
                 </li>
-                <li>
-                <Link href='/about' className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100'>
-                <span className='flex'>
-                  <svg 
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 576 512'
-                    className='mr-2 h-6 w-6'
-                    aria-hidden='true'
-                  >
-                    <path 
-                      d='M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z'/>
-                  </svg>
-                  About
-                  </span>
-                </Link>
-              </li>
                 <li>
                   <Link
                     href='/contact'
@@ -237,13 +195,13 @@ export default function Header() {
                   >
                     <span className='flex'>
                       <svg
+                        aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='none'
                         viewBox='0 0 24 24'
                         strokeWidth='2'
                         stroke='currentColor'
                         className='mr-2 h-6 w-6'
-                        aria-hidden='true'
                       >
                         <path
                           strokeLinecap='round'
@@ -262,13 +220,13 @@ export default function Header() {
                   >
                     <span className='flex'>
                       <svg
+                        aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='none'
                         viewBox='0 0 24 24'
                         strokeWidth='2'
                         stroke='currentColor'
                         className='mr-2 h-6 w-6'
-                        aria-hidden='true'
                       >
                         <path
                           strokeLinecap='round'
@@ -283,8 +241,8 @@ export default function Header() {
               </ul>
             </nav>
           </div>
-        </Dialog.Panel>
+        </DialogPanel>
       </Dialog>
     </header>
   );
-}
+};
