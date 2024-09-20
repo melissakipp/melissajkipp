@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Resend } from 'resend';
+import ContactFormEmail from '../../../emails/ContactFormEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,11 +12,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       from: 'melissa@thelaunchmarket.com',
       to: ['melissakipp.az@gmail.com'], 
       subject: 'New Contact Lead',
-      html: `
-      <h1> Subject: New Contact Form</h1>
-      <p>First Name: ${ firstName }</p>
-      <p>Email: ${ email }</p>
-      `, 
+      react: ContactFormEmail({ firstName, email }),  
     });
 
     if (error) {
