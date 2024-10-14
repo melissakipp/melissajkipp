@@ -32,7 +32,7 @@ const baseUrl = process.env.URL
 
 const PropDefaults: ContactFormEmail = {
   firstName: "Friend",
-  email: "",
+  email: "test@email.com",
   steps: [
     {
       id: 1,
@@ -94,7 +94,7 @@ const PropDefaults: ContactFormEmail = {
   links: ["Visit the forums", "Read the docs", "Contact an expert"],
 };
 
-export const NetlifyWelcomeEmail = ({
+export const WelcomeEmail = ({
   firstName = PropDefaults.firstName,
   email = PropDefaults.email,
   steps = PropDefaults.steps,
@@ -110,7 +110,7 @@ export const NetlifyWelcomeEmail = ({
             extend: {
               colors: {
                 brand: "#81498A",
-                offwhite: "#F7F2F8",
+                offWhite: "#F7F2F8",
               },
               spacing: {
                 0: "0px",
@@ -121,7 +121,7 @@ export const NetlifyWelcomeEmail = ({
           },
         }}
       >
-        <Body className="bg-offwhite text-base font-sans">
+        <Body className="bg-offWhite text-base font-sans">
           <Img
             src='/public/static/melissa-j-kipp.png'
             width="200"
@@ -137,7 +137,7 @@ export const NetlifyWelcomeEmail = ({
             <Section>
               <Row>
                 <Text className="text-base">
-                  We're excited to help you build, launch, and grow with modern solutions. We will contacting you at {email}.
+                  I&apos;m excited to help you build, launch, and grow with modern solutions. I will contacting you at {email}.
                 </Text>  
 
                 <Text className="text-base">What to expect next:</Text>
@@ -187,4 +187,4 @@ export const NetlifyWelcomeEmail = ({
   );
 };
 
-export default NetlifyWelcomeEmail;
+export default WelcomeEmail;

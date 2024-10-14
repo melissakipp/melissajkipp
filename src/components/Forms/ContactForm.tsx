@@ -11,7 +11,7 @@ export default function ContactForm() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const response = await fetch('/pages/api/send', {
+      const response = await fetch('/api/emails', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,10 +23,9 @@ export default function ContactForm() {
       });
       console.log('response:', response);
       if (response.ok) {
-        console.log('Email sent successfully');
-         // Redirect to the thank-you page
+        console.log('Email sent successfully');    
       } else {
-        alert('Something went wrong.'); //error
+        alert('Something went wrong.'); 
         console.error('Error sending email:', response.statusText);
       }
     } catch (error) {
@@ -35,13 +34,12 @@ export default function ContactForm() {
       setName('');
       setEmail('');
     }
-    console.log('Form submitted');
   }
 
   return (
     <section>
       <h2>ContactForm</h2>
-      <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+      <p>Fill out the form below and we&apos;ll get back to you as soon as possible.</p>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <Input 
