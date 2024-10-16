@@ -121,6 +121,9 @@ export default function About() {
           </ul>
         </section>
       </div>
+      <section className="h-[400px] bg-white p-4 rounded-xl shadow-md border border-gray-300">
+        <p>Three.js Area</p>
+      </section>
     </article>
   );
 }
