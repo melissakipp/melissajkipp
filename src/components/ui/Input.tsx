@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="form-group">
       <label
-        className="m-2 block text-md font-medium text-gray-800" 
+        className="mt-4 block text-md font-medium text-gray-800" 
         htmlFor={name}
       >{label}
         <input
