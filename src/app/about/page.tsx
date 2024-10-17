@@ -1,5 +1,8 @@
 import Image from 'next/image';
-// import Three from '@/public/images/three.svg';
+import dynamic from 'next/dynamic';
+
+const ThreeScene = dynamic(() => import('../../components/Threejs/ThreeScene'), { ssr: false })
+
 
 export default function About() {
   return (
@@ -121,8 +124,8 @@ export default function About() {
           </ul>
         </section>
       </div>
-      <section className="h-[400px] bg-white p-4 rounded-xl shadow-md border border-gray-300">
-        <p>Three.js Area</p>
+      <section className="m-4 border-4 border-purple-500 drop-shadow-md rounded-lg">
+        <ThreeScene />
       </section>
     </article>
   );
