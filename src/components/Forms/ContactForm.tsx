@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import Input from "../ui/Input";
 import CustomButton from "../ui/CustomButton";
+import FormField from "../ui/FormField";
 
 export default function ContactForm() {
   const router = useRouter();
@@ -57,56 +58,48 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="my-[10vw] mx-auto px-8 pt-6 pb-8 w-full bg-slate-50 shadow-md rounded max-w-md">
-      <h2 className="mb-6 text-2xl font-bold text-center">Contact Form</h2>
+    <section className="w-full my-[10vw] mx-auto px-6 py-6 bg-slate-50 shadow-md rounded max-w-md">
+      <h2 className="text-2xl font-bold text-center">Contact Form</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <fieldset aria-label="personal information">
-          <Input 
+          <FormField
+            label="Name"
             id="name"
             type="text"
             name="name"
-            label="Name"
-            placeholder="Enter your first name"
-            value={formData.name}
+            placeholder="Enter your name"
             onChange={handleChange}
-            className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
             required
           />
-          <Input 
+          <FormField
+            label="Email"
             id="email"
             type="email"
             name="email"
-            label="Email"
-            placeholder="Enter your email address"
-            value={formData.email}
+            placeholder="Enter your email"
             onChange={handleChange}
-            className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
-            required
-          /> 
-        </fieldset>
-        <fieldset aria-label="Message details" className="h-20rem">
-          <Input
-            id="subject"
-            type="text"
-            name="subject"
-            label="Subject"
-            placeholder="Enter the subject of your message"
-            value={formData.subject}
-            onChange={handleChange}
-            className="my-3 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
             required
           />
-          <label htmlFor="message">Message:&nbsp;<small className="text-red-700">&#42;</small>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message here"
-              value={formData.message}
+        </fieldset>
+        <fieldset aria-label="Message details">
+          <FormField
+              label="Subject"
+              id="subject"
+              type="text"
+              name="subject"
+              placeholder="Subject of your message"
               onChange={handleChange}
-              className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
               required
             />
-          </label>
+          <FormField
+            label="Message"
+            id="message"
+            name="message"
+            placeholder="Your message here"
+            onChange={handleChange}
+            isTextarea
+            rows={6}
+          />
         </fieldset>
         <fieldset aria-label="Submit">
           <CustomButton 
