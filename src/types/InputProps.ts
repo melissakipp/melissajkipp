@@ -1,4 +1,5 @@
 export interface InputProps {
+  id: string;
   type?: 'text' | 'email' | 'password' | 'number' | 'date' | 'time' | 'textarea';
   name: string;
   label: string;
@@ -6,5 +7,5 @@ export interface InputProps {
   value?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
-  // ... other props as needed
+  required?: boolean;
 }

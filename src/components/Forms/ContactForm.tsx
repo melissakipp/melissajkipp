@@ -62,6 +62,7 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <fieldset aria-label="personal information">
           <Input 
+            id="name"
             type="text"
             name="name"
             label="Name"
@@ -69,8 +70,10 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
+            required
           />
           <Input 
+            id="email"
             type="email"
             name="email"
             label="Email"
@@ -78,25 +81,30 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
+            required
           /> 
         </fieldset>
-        <fieldset aria-label="Message details">
-          <Input 
+        <fieldset aria-label="Message details" className="h-20rem">
+          <Input
+            id="subject"
             type="text"
             name="subject"
             label="Subject"
             placeholder="Enter the subject of your message"
             value={formData.subject}
             onChange={handleChange}
-            className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
+            className="my-3 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
+            required
           />
-          <label htmlFor="message" className="block m-2">Message
+          <label htmlFor="message">Message:&nbsp;<small className="text-red-700">&#42;</small>
             <textarea
+              id="message"
               name="message"
               placeholder="Enter your message here"
               value={formData.message}
               onChange={handleChange}
               className="my-2 p-3 w-full shadow appearance-none border rounded text-gray-700 leading-tight focus:border-zinc-400 focus:ring-zinc-600 focus:ring-offset-2 focus:outline-purple-700 focus:shadow-outline"
+              required
             />
           </label>
         </fieldset>
