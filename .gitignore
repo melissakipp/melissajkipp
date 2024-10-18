@@ -37,3 +37,7 @@ next-env.d.ts
 
 # react-email
 .react-email
+
+# Sanity.io
+.sanity
+dist
