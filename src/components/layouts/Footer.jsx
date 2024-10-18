@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
     BiEnvelope,
     BiLogoGithub,
@@ -8,7 +9,7 @@ import {
   
   export default function Footer() {
     return (
-      <footer className='flex min-h-[8vh] w-full items-center bg-purple-700 p-[3vh] text-purple-50 text-center'>
+      <footer className='min-h-[8vh] w-full p-[4%] flex items-center bg-purple-700 text-purple-50 text-center'>
         <article className='mx-auto w-full max-w-screen-xl grid-rows-2'>
           <section>
             <h4 className='sr-only'>Social Media Links</h4>
@@ -52,8 +53,8 @@ import {
               </li>
             </ul>
           </section>
-          <section className=''>
-            <h4 className='sr-only'>Disclaimer - Copyrights</h4>
+          <section className='py-3'>
+            <h4 className='sr-only'>Copyrights</h4>
             <a
               className='hover:underline'
               href='https://www.linkedin.com/in/melissajkipp/'
@@ -61,7 +62,18 @@ import {
             >
               Melissa J Kipp
             </a>&nbsp;
-            &copy; 2023
+            &copy;&nbsp;2020 - {new Date().getFullYear()}
+          </section>
+          <section>
+            <h4 className='sr-only'>Terms of Use and Accessibility</h4>
+            <small><Link href='/termsofuse'>
+              <span className='border-b hover:font-bold'>Terms of Use</span>
+            </Link>
+            &nbsp;&amp;&nbsp;
+            <Link href='/accessibility'>
+              <span className='border-b hover:font-bold'>Accessibility</span>
+            </Link>
+            </small>
           </section>
         </article>
       </footer>
