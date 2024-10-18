@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
-import Input from "../ui/Input";
 import CustomButton from "../ui/CustomButton";
 import FormField from "../ui/FormField";
 
@@ -59,7 +58,7 @@ export default function ContactForm() {
 
   return (
     <section className="w-full my-[10vw] mx-auto px-6 py-6 bg-slate-50 shadow-md rounded max-w-md">
-      <h2 className="text-2xl font-bold text-center">Contact Form</h2>
+      <h2 className="mb-6 text-2xl font-bold text-center">Contact Form</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <fieldset aria-label="personal information">
           <FormField
