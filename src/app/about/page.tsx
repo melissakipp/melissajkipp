@@ -125,7 +125,7 @@ export default function About() {
         </section>
       </div>
       <section className="m-4 border-4 border-purple-500 drop-shadow-md rounded-lg">
-        <ThreeScene />
+        {/* <ThreeScene /> */}
       </section>
     </article>
   );
